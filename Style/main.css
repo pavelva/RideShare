@@ -1,24 +1,67 @@
-*{padding:0;margin:0;border:none;border-collapse:collapse;text-decoration:none;list-style:none}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v10/K88pR3goAWT7BTt32Z01m1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+
+*{padding:0;margin:0;border:none;border-collapse:collapse;text-decoration:none;list-style:none;font-family:'Open Sans', sans-serif;overflow: hidden}
 
 header{
     width:100%;
-    height:100px;
+    height:110px;
     padding: 10px 0;
     background: #1e1e1e;
 }
 
 #logo{
-    width:20%;
+    width:400px;
     margin:auto;
     display: block;
 }
 
 nav{
     width:1000px;
-    height: 70px;
-    /*background: #0286ff;*/
-    margin:auto;
-    border:1px solid black;
+    height: 60px;
+    margin:0 auto;
+    margin-bottom: 10px;
+    border-bottom:1px solid black;
 }
 
+nav a{
+    width:25%;
+    margin-top: 30px;
+    display:block;
+    float:left;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #293359;
+}
+
+nav a:hover{
+    color: #0185fd;
+}
+
+#content{
+    width:1000px;
+    height: 700px;
+    margin:0 auto;
+    border-bottom: 1px solid black;
+}
+main{
+    width:657px;
+    margin-right: 10px;
+    height: 700px;
+    float:left;
+}
+
+aside{
+    width:333px;
+    height:500px;
+    background:#1e1e1e;
+    color:white;
+    float:left;
+}
 

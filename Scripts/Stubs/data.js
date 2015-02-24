@@ -1,0 +1,120 @@
+﻿var myRides =
+    [{
+        id: 1,
+        data: [
+            {
+                type: 'Ride',
+                status: 'Done',
+                id: '1111',
+                driver: 'Avi Moshe',
+                driverID: 1,
+                date: '10/12/2015',
+                fromTime: '19:00',
+                toTime: '23:00',
+                riders: [
+                    {
+                        name: users[1].publicData.name,
+                        lastName: users[1].publicData.lastName,
+                        id: users[1].publicData.id,
+                        ranked: false
+                    },
+                    {
+                        name: users[3].publicData.name,
+                        lastName: users[3].publicData.lastName,
+                        id: users[3].publicData.id,
+                        ranked: false
+                    }]
+            },
+            {
+                type: 'Request',
+                status: 'Opend',
+                id: '2222',
+                driver: 'Arnold Schwarzenegger',
+                driverID: 3,
+                date: '10/11/2015',
+                fromTime: '19:00',
+                toTime: '21:00',
+                riders: [
+                    {
+                        name: users[0].publicData.name,
+                        lastName: users[0].publicData.lastName,
+                        id: users[0].publicData.id,
+                    }],
+                ranked: false
+            },
+            {
+                type: 'Request',
+                status: 'Done',
+                id: '3333',
+                driver: 'Dana Modan',
+                driverID: 7,
+                date: '11/01/2015',
+                fromTime: '19:00',
+                toTime: '21:00',
+                riders: [
+                    {
+                        name: users[0].publicData.name,
+                        lastName: users[0].publicData.lastName,
+                        id: users[0].publicData.id,
+                        ranked: true
+                    },
+                    {
+                        name: users[8].publicData.name,
+                        lastName: users[8].publicData.lastName,
+                        id: users[8].publicData.id,
+                        ranked: false
+                    },
+                    {
+                        name: users[6].publicData.name,
+                        lastName: users[6].publicData.lastName,
+                        id: users[6].publicData.id,
+                        ranked: false
+                    }],
+                ranked: false
+            },
+            {
+                type: 'Ride',
+                status: 'Opend',
+                id: '4444',
+                driver: 'Avi Moshe',
+                driverID: 1,
+                date: '10/01/2015',
+                fromTime: '19:00',
+                toTime: '21:00',
+                riders: []
+            },
+            {
+                type: 'Request',
+                status: 'Done',
+                id: '3333',
+                driver: 'Sara Netanyahu',
+                driverID: 8,
+                date: '11/01/2015',
+                fromTime: '19:00',
+                toTime: '21:00',
+                riders: [
+                    {
+                        name: users[4].publicData.name,
+                        lastName: users[4].publicData.lastName,
+                        id: users[4].publicData.id,
+                        ranked: true
+                    },
+                    {
+                        name: users[5].publicData.name,
+                        lastName: users[5].publicData.lastName,
+                        id: users[5].publicData.id,
+                        ranked: false
+                    },
+                    {
+                        name: users[8].publicData.name,
+                        lastName: users[8].publicData.lastName,
+                        id: users[8].publicData.id,
+                        ranked: false
+                    }],
+                ranked: false
+            }]
+    },
+    {
+        id: 2,
+        data: []
+    }];
