@@ -1,0 +1,24 @@
+*{padding:0;margin:0;border:none;border-collapse:collapse;text-decoration:none;list-style:none}
+
+header{
+    width:100%;
+    height:100px;
+    padding: 10px 0;
+    background: #1e1e1e;
+}
+
+#logo{
+    width:20%;
+    margin:auto;
+    display: block;
+}
+
+nav{
+    width:1000px;
+    height: 70px;
+    /*background: #0286ff;*/
+    margin:auto;
+    border:1px solid black;
+}
+
+
