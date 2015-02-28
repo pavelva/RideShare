@@ -8,18 +8,19 @@
 
 .myRides *{
     direction:ltr;
+    color:white
 }
 
 .myRide {
     width:100%;
-    border:1px solid #bbbbbb;
+    /*border:1px solid #bbbbbb;*/
     margin: 0 0 5px 0;
+    background-color: rgba(30,30,30,0.9);
 }
 
 .myRide .header {
     width:100%;
-    background: #293359;
-    opacity: 0.85;
+    background-color: rgba(30,30,30,0.6);
     margin:0 0 0.5% 0;
 }
 
@@ -27,7 +28,6 @@
     display:inline-block;
     font-weight:bold;
     font-size: 1.2em;
-    color:white
 }
 
 .myRide .type {
@@ -51,7 +51,6 @@
     width: 99%;
     margin-left: 1%;
     font-size: 1.1em;
-    position: relative;
 }
 
 .myRide .left {
@@ -103,7 +102,7 @@
 }
 .myRide .controlls {
     width: 100%;
-    margin: 5px 0 5px 5px;
+    margin: 5px 0 0 5px;
 }
 
 .myRide .controlls .controll {
@@ -112,7 +111,7 @@
     border-radius:5px;
     color:#ecebe4;
     font-size:15px;
-    margin-right:15px;
+    margin:0 15px 10px 0;
     padding:0 8px;
     height:28px;
 }
