@@ -1,0 +1,75 @@
+#loginRegisterContent{
+    width:800px;
+    height: 700px;
+    margin:0 auto;
+    border-bottom: 1px solid black;
+}
+.loginRegisterHeader{
+    width:800px;
+    height: 70px;
+    margin:0 auto;
+    margin-bottom: 10px;
+    border-bottom:1px solid black;
+}
+
+#loginRegisterText{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+    display:block;
+    float:left;
+    color: #293359;
+}
+
+#loginMain{
+    width:800px;
+    height: 600px;
+    margin:0 auto;
+    color: white;
+    /*background-color: #c59133;*/
+}
+
+.userDetails {
+    width: 375px;
+    margin-top: 30px;
+}
+
+.label {
+    display:inline-block;
+    width:165px;
+    height:24px;
+    color:#2c3e50;
+    vertical-align:bottom;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.txt {
+    width:350px;
+    height:35px;
+    border: 1px solid #484848;
+    border-radius:8px;
+    opacity:0.6;
+    font-size:20px;
+    padding: 0 10px;
+}
+
+.button {
+    width:130px;
+    height:40px;
+    background-color:#293359;
+    color:#ecf0f1;
+    border-radius:8px;
+    border:1px solid;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#leftButton{
+    margin-left: 35px;
+
+}
+
+#rightButton{
+    margin-left: 25px;
+}
