@@ -5,11 +5,21 @@
     <title>RideShare</title>
     <link rel="stylesheet" type="text/css" href="Style/main.css">
     <link rel="stylesheet" type="text/css" href="Style/myRides.css">
+    <link type="text/css" href="Style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
 
-    <script type="text/javascript" src="Scripts/jquery/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="Scripts/jquery/jquery-ui.js"></script>
-    <script type="text/javascript" src="Scripts/myRides.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+    <script type="text/javascript" src="Scripts/jquery/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery/jquery.mousewheel.js"></script>
+
+
+
+        <script type="text/javascript" src="Scripts/myRides.js"></script>
     <script type="text/javascript" src="Scripts/global.js"></script>
 
     <script type="text/javascript" src="Scripts/Stubs/users.js"></script>
@@ -20,10 +30,12 @@
         <img src="Images/logo.png" id="logo">
     </header>
     <nav>
-        <a href="">My Rides</a>
-        <a href="">Search Ride</a>
-        <a href="">Publish Ride</a>
-        <a href="">Post Request</a>
+        <div class="links">
+            <a href="">My Rides</a>
+            <a href="">Search Ride</a>
+            <a href="">Publish Ride</a>
+            <a href="">Post Request</a>
+        </div>
     </nav>
 
     <div id="content">

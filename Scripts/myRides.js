@@ -2,12 +2,22 @@
  * Created by Pavel on 24/02/2015.
  */
 $(document).ready(function(){
+
+
     //init();
 
     var rides = loadMyRides(1);
     for (i in rides)
         updateMyRides(rides[i]);
     //updateCurrentPage(pages.myRides);
+
+    $('.myRides').jScrollPane({
+            horizontalGutter: 0,
+            verticalGutter: 0
+
+        }
+    );
+
 });
 
 function updateMyRides(ride) {
@@ -34,7 +44,7 @@ function createRide(ride){
                 '</div>' +
             '</div>' +
             '<div class="controlls">' +
-                (ride.status != 'Done'?'<input type="button" class="controll" value="Update Ride"/>':'') +
+                (ride.status != 'Done'?'<input type="button" class="btn controll a" value="Update Ride"/>':'') +
             '</div>' +
         '</div>';
 }
@@ -56,8 +66,8 @@ function createRequest(ride){
                 createRidesLeftSide(ride) +
             '</div>' +
             '<div class="controlls">' +
-                (ride.status != 'Done' ? '<input type="button" class="controll" value="Cancel Request"/>' : '') +
-                (ride.status == 'Done' && !ride.ranked ? '<input type="button" class="controll" value="Rank Ride"/>' : '') +
+                (ride.status != 'Done' ? '<input type="button" class="btn controll a" value="Update Request"/>' : '') +
+                (ride.status == 'Done' && !ride.ranked ? '<input type="button" class="btn controll a" value="Rank Ride"/>' : '') +
             '</div>' +
         '</div>';
 }
@@ -84,7 +94,7 @@ function createRidersList(ride) {
 
     for (i in ride.riders) {
         ans += '<p class="rider">' +
-        (ride.type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="riderRank" value="Rank"/>' : '') +
+        (ride.type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="btn riderRank a" value="Rank"/>' : '') +
         '<span class="riderName">' +
         ride.riders[i].name + ' ' + ride.riders[i].lastName +
         '</span>' +
