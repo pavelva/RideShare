@@ -53,7 +53,7 @@ body{
     /*background: #ecf0f1;*/
     background-image: url("../Images/bg3.png");
     background-size: cover;
-    background-position: 40% 80%;
+    background-position: 40% 50%;
     z-index: 1;
 }
 
