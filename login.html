@@ -28,70 +28,71 @@
 <header>
     <img src="Images/logo.png" id="logo">
 </header>
-
-<div id="loginRegisterContent" class="container">
-    <div id="loginContent">
-        <div class="loginRegisterHeader">
-            <div class="loginRegisterText">
-                Login
+<nav></nav>
+    <div id="loginRegisterContent">
+        <div id="registerContent" class="container">
+            <div class="loginRegisterHeader">
+                <div class="loginRegisterText">
+                    Register
+                </div>
+            </div>
+            <div id="signUpContent">
+                <p class="userDetails" id="regTxt1">new with RideShare ?</p>
+                <p class="userDetails" id="regTxt2">Get started now. It's fast and easy!</p>
+                <input type="button" class="button btn" id="regBtn" value="Register" onclick="registerMode()"/>
+            </div>
+            <div id="registerMainInputContent">
+                <p class="userDetails">
+                    <span class="label">First Name:</span>
+                    <input type="text" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <span class="label">Last Name:</span>
+                    <input type="text" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <span class="label">Email:</span>
+                    <input type="email" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <span class="label">Phone Number:</span>
+                    <input type="number" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <span class="label">Password:</span>
+                    <input type="password" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <span class="label">Verify Password:</span>
+                    <input type="password" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <input type="button" class="button btn" value="Register"/>
+                </p>
             </div>
         </div>
-        <div id="loginMainInputContent">
-            <p class="userDetails">
-                <span class="label">Email:</span>
-                <input type="email" class="txt" />
-            </p>
-            <p class="userDetails">
-                <span class="label">Password:</span>
-                <input type="password" class="txt" />
-            </p>
-            <p class="userDetails">
-                <input type="button" class="button" value="Login"/>
-            </p>
-        </div>
-    </div>
 
-    <div id="registerContent" class="container">
-        <div class="loginRegisterHeader">
-            <div class="loginRegisterText">
-                Regiter
+
+        <div id="loginContent" class="container">
+            <div class="loginRegisterHeader">
+                <div class="loginRegisterText">
+                    Login
+                </div>
+            </div>
+            <div id="loginMainInputContent">
+                <p class="userDetails">
+                    <span class="label">Email:</span>
+                    <input type="email" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <span class="label">Password:</span>
+                    <input type="password" class="txt" />
+                </p>
+                <p class="userDetails">
+                    <input type="button" class="button btn" value="Login"/>
+                </p>
             </div>
         </div>
-        <div id="signUpContent">
-            <p class="userDetails">new with RideShare ?</p>
-            <p class="userDetails">Get started now. It's fast and easy!</p>
-            <input type="button" class="button" id="regBtn" value="Register" onclick="registerMode()"/>
-        </div>
-        <div id="registerMainInputContent">
-            <p class="userDetails">
-                <span class="label">First Name:</span>
-                <input type="text" class="txt" />
-            </p>
-            <p class="userDetails">
-                <span class="label">Last Name:</span>
-                <input type="text" class="txt" />
-            </p>
-            <p class="userDetails">
-                <span class="label">Email:</span>
-                <input type="email" class="txt" />
-            </p>
-            <p class="userDetails">
-                <span class="label">Phone Number:</span>
-                <input type="number" class="txt" />
-            </p>
-            <p class="userDetails">
-                <span class="label">Password:</span>
-                <input type="password" class="txt" />
-            </p>
-            <p class="userDetails">
-                <span class="label">Verify Password:</span>
-                <input type="password" class="txt" />
-            </p>
-            <p class="userDetails">
-                <input type="button" class="button" value="Register"/>
-            </p>
-        </div>
     </div>
-</div>
 </body>
 </html>

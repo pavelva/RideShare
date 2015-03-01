@@ -1,18 +1,17 @@
 #loginRegisterContent{
-    width:1000px;
-    height: 700px;
-    margin:0 auto;
+    width:67.7%;
+    height: 820px;
+    margin: 0 auto;
+    margin-top: 30px;
+
 }
-#loginContent{
-    width:49.5%;
-    float: left;
-    /*border: 1px solid green;*/
+#loginContent {
+    width:49.5%
 }
 
 #registerContent{
-    width:49.5%;
+    width: 49.5%;
     float: right;
-    /*border: 1px solid green;*/
 }
 
 .loginRegisterHeader{
@@ -20,37 +19,33 @@
     height: 70px;
     margin:0 auto;
     margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid rgba(255,255,255,0.5);
 }
 
 .loginRegisterText{
     font-size: 2em;
-    font-weight: bold;
     margin-top: 30px;
     display:block;
     float:left;
-    color: #293359;
+    color: #3eaaf5;
 }
 
 #loginMainInputContent{
     width: 85%;
     margin: 0 auto;
     color: white;
-    /*background-color: #c59133;*/
 }
 
 #registerMainInputContent{
     width: 85%;
     margin: 0 auto;
     color: white;
-    /*background-color: #c59133;*/
     display: none;
 }
 
 #signUpContent{
     width: 85%;
     margin: 0 auto;
-    /*border: 1px solid green;*/
 }
 
 .userDetails {
@@ -62,10 +57,10 @@
     display:inline-block;
     width:165px;
     height:24px;
-    color:#2c3e50;
+    color: white;
     vertical-align:bottom;
     font-size:16px;
-    font-weight:bold;
+    /*font-weight:bold;*/
 }
 
 .txt {
@@ -73,7 +68,7 @@
     height:35px;
     border: 1px solid #484848;
     border-radius:8px;
-    opacity:0.6;
+    background: rgba(255,255,255,0.8);
     font-size:20px;
     padding: 0 10px;
 }
@@ -81,16 +76,26 @@
 .button {
     width:130px;
     height:40px;
-    background-color:#293359;
-    color:#ecf0f1;
-    border-radius:8px;
-    border:1px solid;
     font-size:18px;
-    font-weight:bold;
+    border-radius: 7px !important;
+    margin-bottom: 20px;
 }
 
 #regBtn{
-    width: 35%;
-    height: 50px;
-    margin: 0 auto;
+    width: 45%;
+    height: 60px;
+    display: block;
+    margin: 45px auto 40px auto;
+    font-size: 26px;
+}
+#regTxt1{
+    display: block !important;
+    font-size: 22px;
+    margin: 40px auto;
+    text-align: center;
+}
+#regTxt2{
+    display: block !important;
+    margin: 40px auto;
+    text-align: center;
 }
