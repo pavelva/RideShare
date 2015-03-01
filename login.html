@@ -15,31 +15,82 @@
 
     <script type="text/javascript" src="Scripts/Stubs/users.js"></script>
     <script type="text/javascript" src="Scripts/Stubs/data.js"></script>
+
+    <script type="text/javascript">
+        function registerMode(){
+//            alert(1);
+            $("#signUpContent").hide();
+            $("#registerMainInputContent").show();
+        }
+    </script>
 </head>
 <body>
 <header>
     <img src="Images/logo.png" id="logo">
 </header>
 
-<div id="loginRegisterContent">
-    <div class="loginRegisterHeader">
-        <div id="loginRegisterText">
-            Login
+<div id="loginRegisterContent" class="container">
+    <div id="loginContent">
+        <div class="loginRegisterHeader">
+            <div class="loginRegisterText">
+                Login
+            </div>
+        </div>
+        <div id="loginMainInputContent">
+            <p class="userDetails">
+                <span class="label">Email:</span>
+                <input type="email" class="txt" />
+            </p>
+            <p class="userDetails">
+                <span class="label">Password:</span>
+                <input type="password" class="txt" />
+            </p>
+            <p class="userDetails">
+                <input type="button" class="button" value="Login"/>
+            </p>
         </div>
     </div>
-    <div id="loginMain">
-        <p class="userDetails">
-            <span class="label">Email:</span>
-            <input type="email" class="txt" />
-        </p>
-        <p class="userDetails">
-            <span class="label">Password:</span>
-            <input type="password" class="txt" />
-        </p>
-        <p class="userDetails">
-            <input type="button" class="button" id="leftButton" value="Login"/>
-            <input type="button" class="button" id="rightButton" value="Register"/>
-        </p>
+
+    <div id="registerContent" class="container">
+        <div class="loginRegisterHeader">
+            <div class="loginRegisterText">
+                Regiter
+            </div>
+        </div>
+        <div id="signUpContent">
+            <p class="userDetails">new with RideShare ?</p>
+            <p class="userDetails">Get started now. It's fast and easy!</p>
+            <input type="button" class="button" id="regBtn" value="Register" onclick="registerMode()"/>
+        </div>
+        <div id="registerMainInputContent">
+            <p class="userDetails">
+                <span class="label">First Name:</span>
+                <input type="text" class="txt" />
+            </p>
+            <p class="userDetails">
+                <span class="label">Last Name:</span>
+                <input type="text" class="txt" />
+            </p>
+            <p class="userDetails">
+                <span class="label">Email:</span>
+                <input type="email" class="txt" />
+            </p>
+            <p class="userDetails">
+                <span class="label">Phone Number:</span>
+                <input type="number" class="txt" />
+            </p>
+            <p class="userDetails">
+                <span class="label">Password:</span>
+                <input type="password" class="txt" />
+            </p>
+            <p class="userDetails">
+                <span class="label">Verify Password:</span>
+                <input type="password" class="txt" />
+            </p>
+            <p class="userDetails">
+                <input type="button" class="button" value="Register"/>
+            </p>
+        </div>
     </div>
 </div>
 </body>
