@@ -29,7 +29,7 @@ function updateMyRides(ride) {
 
 function createRide(ride){
     return "" +
-        '<div class="myRide">' +
+        '<div class="myRide container">' +
             '<div class="header">' +
                 '<span class="type">' + ride.type +'</span>' +
                 '<span class="route">' + 'Beer Sheva - Haifa' + '</span>' +
@@ -51,7 +51,7 @@ function createRide(ride){
 
 function createRequest(ride){
     return "" +
-        '<div class="myRide">' +
+        '<div class="myRide container">' +
             '<div class="header">' +
                 '<span class="type">' + ride.type + '</span>' +
                 '<span class="route">' + 'Beer Sheva - Haifa' + '</span>' +

@@ -13,8 +13,6 @@
 .myRide {
     width:99.5%;
     margin: 0 0 5px 0;
-    background-color: rgba(0,0,0,0.85);
-    border:1px solid rgba(255,255,255,0.7);
 }
 
 .myRide .header {
@@ -51,8 +49,6 @@
 .myRide .body {
     width: 99%;
     margin-left: 1%;
-    font-size: 1.1em;
-    color:white;
 }
 
 .myRide .left {
