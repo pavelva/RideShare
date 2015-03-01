@@ -1,6 +1,6 @@
 .myRides{
-    width:99.6%;
-    padding:0 0 0 0.4%  ;
+    width:99.2%;
+    padding:0 0 0 0.8%  ;
     height:98%;
     overflow-y:auto;
     direction: rtl;
@@ -9,85 +9,86 @@
 .myRides *{
     direction:ltr;
 }
+
 .myRide {
     width:100%;
+    border:1px solid #bbbbbb;
+    margin: 0 0 5px 0;
 }
 
 .myRide .header {
     width:100%;
     background: #293359;
-    color:white;
-    /*font-size: 1.3em;*/
+    opacity: 0.85;
+    margin:0 0 0.5% 0;
+}
+
+.myRide .header *{
+    display:inline-block;
+    font-weight:bold;
+    font-size: 1.2em;
+    color:white
 }
 
 .myRide .type {
     width:14%;
-    display:inline-block;
-    font-size:1.05em;
-    font-weight:bold;
     margin-left: 1%;
 }
 .myRide .status{
     width:14%;
     direction: rtl;
-    display: inline-block;
-    font-size:1.1em;
-    font-weight:bold;
     margin-right: 1%;
 }
 
 .myRide .route{
     width:70%;
-    display: inline-block;
     margin: 0 auto;
     font-size:1.02em;
-    font-weight:bold;
     text-align: center;
 }
 
 .myRide .body {
     width: 99%;
     margin-left: 1%;
+    font-size: 1.1em;
+    position: relative;
 }
 
 .myRide .left {
-    float:left;
+    display: inline-block;
     width:50%;
 }
 
 .myRide .right {
     float:right;
+    display: inline-block;
     width:50%;
 }
 
 .myRide .rideDetail {
-    margin: 0;
-    display:block;
+    margin:0 0 1.5% 0;
 }
 
 .myRide .rideDetail .detailHeader {
     display:block;
-    width:100%;
-    font-weight:500;
+    font-weight:bold;
+    margin:0 0 0.5% 0;
 }
 
 .myRide .rideDetail .detailContent {
-    display:inline-block;
+    display:block;
+    margin-left:1%;
 }
 
 .myRide .riders {
     width:100%;
-    font-weight:500;
+    font-weight:bold;
 }
 
 .myRide .rider {
     width:95%;
     display:block;
-    margin:3px 0 0 5px;
-}
-
-.myRide .rider .riderName {
-    float: left;
+    margin:3px 0 0 1%;
 }
 
 .myRide .rider .riderRank {
@@ -102,8 +103,7 @@
 }
 .myRide .controlls {
     width: 100%;
-    margin: 10px auto;
-    text-align:center;
+    margin: 5px 0 5px 5px;
 }
 
 .myRide .controlls .controll {
@@ -115,7 +115,6 @@
     margin-right:15px;
     padding:0 8px;
     height:28px;
-    float:left;
 }
 
 

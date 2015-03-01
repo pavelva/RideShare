@@ -48,12 +48,12 @@ function createRequest(ride){
                 '<span class="status">' + ride.status + '</span>' +
             '</div>' +
             '<div class="body">' +
-                createRidesLeftSide(ride) +
                 '<div class="right">' +
                     '<span class="riders">Riders:</span>' +
                     (ride.riders.length == 0 ? ' <p class="rider">No Riders On This Ride</p>' :
                         createRidersList(ride)) +
                 '</div>' +
+                createRidesLeftSide(ride) +
             '</div>' +
             '<div class="controlls">' +
                 (ride.status != 'Done' ? '<input type="button" class="controll" value="Cancel Request"/>' : '') +
@@ -84,10 +84,10 @@ function createRidersList(ride) {
 
     for (i in ride.riders) {
         ans += '<p class="rider">' +
+        (ride.type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="riderRank" value="Rank"/>' : '') +
         '<span class="riderName">' +
         ride.riders[i].name + ' ' + ride.riders[i].lastName +
         '</span>' +
-        (ride.type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="riderRank" value="Rank"/>' : '') +
         '</p>';
     }
 
