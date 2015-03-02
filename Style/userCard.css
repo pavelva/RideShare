@@ -1,0 +1,122 @@
+/*-----------User Card-----------*/
+#userCard {
+    width: 100%;
+    height:100%;
+}
+
+#userCardHeader {
+    margin: 1.5% 0 0 0;
+    height:28.5%;
+}
+
+.userContainer {
+    width:70%;
+    float:right;
+}
+
+.user {
+    display:block;
+    width: 100%;
+}
+
+#userName {
+    font-size:1.8em;
+    font-weight: bold;
+    height:30px;
+}
+
+#userLastName {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+#userImg {
+    width:25%;
+    margin: 0 5px;
+    background: rgba(255,255,255,0.9);
+}
+
+/*-----------User Card -- Ranking -----------*/
+.details {
+    height:20%;
+    width:100%;
+    display: block;
+}
+
+#ranks{
+    height:30%;
+}
+
+#userCardControls{
+    height:20%;
+}
+
+
+.detail {
+    width:94.5%;
+    margin:0 0 0 5.5%;
+    display: block;
+    font-weight:bold;
+}
+
+.detail1 {
+    display:inline-block;
+    width:25%;
+    height:30px;
+}
+
+.detail2 {
+    width:75%;
+    height:20px;
+    vertical-align: top;
+}
+
+#email, #phone{
+    margin:0 0 1% 1% !important;
+}
+
+#email .detail1  {
+    background:url("../Images/at.png") no-repeat 10px 0;
+    background-size:22px;
+    width:16%;
+}
+#phone .detail1  {
+    background:url("../Images/phone.png") no-repeat 9px 0;
+    background-size:25px;
+    width:16%;
+}
+
+#ranksHeader {
+    height:20%;
+    width:96.5%;
+    margin:0 0 0 3.5%;
+    font-size: 1.4em;
+}
+
+#driverRank{
+   margin-bottom: 10px;
+}
+#ranks .detail1{
+    font-size: 1.2em;
+}
+
+#ranks div{
+    height:15%;
+}
+.star {
+    margin:10px 0 0 0;
+    width:20px;
+}
+
+.stars:hover {
+    cursor: default;
+}
+/*-----------Update Profile-----------*/
+#userCardControls .btn {
+    display:block;
+    margin:5px auto;
+    width:160px;
+    height:45px;
+    border-radius:10px;
+    font-size:18px;
+}

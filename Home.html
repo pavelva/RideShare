@@ -5,6 +5,7 @@
     <title>RideShare</title>
     <link rel="stylesheet" type="text/css" href="Style/main.css">
     <link rel="stylesheet" type="text/css" href="Style/myRides.css">
+    <link rel="stylesheet" type="text/css" href="Style/userCard.css">
     <link type="text/css" href="Style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
@@ -39,11 +40,54 @@
     </nav>
 
     <div id="content">
-        <aside class="container userCard">
-            ToDo
+        <aside id="userCard" class="container">
+            <div id="userCardHeader">
+                <div class="userContainer">
+                    <span id="userName" class="user">John</span>
+                    <span id="userLastName" class="user">Doe</span>
+                </div>
+                <img src="Images/jhonDo.png" id="userImg" />
+            </div>
+            <div class="details">
+                <p id="email" class="detail">
+                    <span class="detail1"></span>
+                    <span class="detail2">johndo@gmail.com</span>
+                </p>
+                <p id="phone" class="detail">
+                    <span class="detail1"></span>
+                    <span class="detail2">04-8758665</span>
+                </p>
+            </div>
+
+            <div id="ranks">
+                <span id="ranksHeader" class="detail">Rating</span>
+                <div id="driverRank" class="detail">
+                    <span class="detail1">Driver:</span>
+                    <span class="detail2 stars">
+                        <img class="star" src="Images/fullStar.png" />
+                        <img class="star" src="Images/fullStar.png" />
+                        <img class="star" src="Images/fullStar.png" />
+                        <img class="star" src="Images/halfStar.png" />
+                        <img class="star" src="Images/star.png" />
+                    </span>
+                </div>
+                <div id="riderRank" class="detail">
+                    <span class="detail1">Rider:</span>
+                    <span class="detail2 stars">
+                        <img class="star" src="Images/fullStar.png" />
+                        <img class="star" src="Images/fullStar.png" />
+                        <img class="star" src="Images/halfStar.png" />
+                        <img class="star" src="Images/star.png" />
+                        <img class="star" src="Images/star.png" />
+                    </span>
+                </div>
+            </div>
+            <div id="userCardControls">
+                <input type="button" class="btn a" value="Update Profile"/>
+            </div>
         </aside>
 
-        <aside class="container futureRides">
+        <aside id="futureRides" class="container">
             ToDo
         </aside>
 
@@ -51,21 +95,9 @@
 
             <div class="myRides"></div>
 
-            <!--<div class="ride">-->
-                <!--<div class="header">-->
-                    <!--<span class="type">Ride</span>-->
-                    <!--<span class="status">Done</span>-->
-                <!--</div>-->
-
-                <!--<div class="content">-->
-                    <!--<div class="left">-->
-
-                    <!--</div>-->
-                    <!--<div class right></div>-->
-                <!--</div>-->
-            <!--</div>-->
         </main>
-        <!--<div id="wrapper" style="clear:both"></div>-->
+
+        <footer></footer>
     </div>
 </body>
 </html>

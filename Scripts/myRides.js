@@ -43,8 +43,8 @@ function createRide(ride){
                         createRidersList(ride)) +
                 '</div>' +
             '</div>' +
-            '<div class="controlls">' +
-                (ride.status != 'Done'?'<input type="button" class="btn controll a" value="Update Ride"/>':'') +
+            '<div class="controls">' +
+                (ride.status != 'Done'?'<input type="button" class="btn control a" value="Update Ride"/>':'') +
             '</div>' +
         '</div>';
 }
@@ -65,9 +65,9 @@ function createRequest(ride){
                 '</div>' +
                 createRidesLeftSide(ride) +
             '</div>' +
-            '<div class="controlls">' +
-                (ride.status != 'Done' ? '<input type="button" class="btn controll a" value="Update Request"/>' : '') +
-                (ride.status == 'Done' && !ride.ranked ? '<input type="button" class="btn controll a" value="Rank Ride"/>' : '') +
+            '<div class="controls">' +
+                (ride.status != 'Done' ? '<input type="button" class="btn control a" value="Update Request"/>' : '') +
+                (ride.status == 'Done' && !ride.ranked ? '<input type="button" class="btn control a" value="Rank Ride"/>' : '') +
             '</div>' +
         '</div>';
 }

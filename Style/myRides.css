@@ -2,12 +2,6 @@
     width:99.2%;
     padding:0 0 0 0.8%  ;
     height:100%;
-    overflow-y:auto;
-    direction: rtl;
-}
-
-.myRides *{
-    direction:ltr;
 }
 
 .myRide {
@@ -17,7 +11,7 @@
 
 .myRide .header {
     width:100%;
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0,0.5);
     margin:0 0 0.5% 0;
     color:#3eaaf5;
     border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -46,7 +40,7 @@
     text-align: center;
 }
 
-.myRide .body {
+.myRide .body{
     width: 99%;
     margin-left: 1%;
 }
@@ -95,12 +89,12 @@
     height:18px;
 }
 
-.myRide .controlls {
-    width: 100%;
-    margin: 5px 0 0 5px;
+.myRide .controls {
+    width: 98.5%;
+    margin: 5px 0 0 1.5%;
 }
 
-.myRide .controlls .controll {
+.myRide .controls .control {
     border:none;
     font-size:15px;
     margin:0 15px 10px 0;
