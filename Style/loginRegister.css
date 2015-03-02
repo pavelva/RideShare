@@ -1,15 +1,15 @@
-#loginRegisterContent{
+#loginRegisterContainer{
     width:60%;
     height: 820px;
     margin: 0 auto;
     margin-top: 30px;
 
 }
-#loginContent {
+#login{
     width:49.5%
 }
 
-#registerContent{
+#register{
     width: 49.5%;
     float: right;
 }
@@ -22,7 +22,7 @@
     border-bottom: 3px solid rgba(255,255,255,0.5);
 }
 
-.loginRegisterText{
+.loginRegisterHeaderText{
     font-size: 2em;
     margin-top: 30px;
     display:block;
@@ -30,13 +30,13 @@
     color: #3eaaf5;
 }
 
-#loginMainInputContent{
+#loginContent{
     width: 85%;
     margin: 0 auto;
     color: white;
 }
 
-#registerMainInputContent{
+#registerContent{
     width: 85%;
     margin: 0 auto;
     color: white;

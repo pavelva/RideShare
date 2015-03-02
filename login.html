@@ -20,7 +20,7 @@
         function registerMode(){
 //            alert(1);
             $("#signUpContent").hide();
-            $("#registerMainInputContent").show();
+            $("#registerContent").show();
         }
     </script>
 </head>
@@ -29,19 +29,19 @@
     <img src="Images/logo.png" id="logo">
 </header>
 <nav></nav>
-    <div id="loginRegisterContent">
-        <div id="registerContent" class="container">
+    <div id="loginRegisterContainer">
+        <div id="register" class="container">
             <div class="loginRegisterHeader">
-                <div class="loginRegisterText">
+                <div class="loginRegisterHeaderText">
                     Register
                 </div>
             </div>
             <div id="signUpContent">
-                <p class="userDetails" id="regTxt1">new with RideShare ?</p>
+                <p class="userDetails" id="regTxt1">New to RideShare ?</p>
                 <p class="userDetails" id="regTxt2">Get started now. It's fast and easy!</p>
                 <input type="button" class="button btn" id="regBtn" value="Register" onclick="registerMode()"/>
             </div>
-            <div id="registerMainInputContent">
+            <div id="registerContent">
                 <p class="userDetails">
                     <span class="label">First Name:</span>
                     <input type="text" class="txt" />
@@ -72,14 +72,13 @@
             </div>
         </div>
 
-
-        <div id="loginContent" class="container">
+        <div id="login" class="container">
             <div class="loginRegisterHeader">
-                <div class="loginRegisterText">
+                <div class="loginRegisterHeaderText">
                     Login
                 </div>
             </div>
-            <div id="loginMainInputContent">
+            <div id="loginContent">
                 <p class="userDetails">
                     <span class="label">Email:</span>
                     <input type="email" class="txt" />
