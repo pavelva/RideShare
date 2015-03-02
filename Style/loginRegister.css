@@ -60,7 +60,6 @@
     color: white;
     vertical-align:bottom;
     font-size:16px;
-    /*font-weight:bold;*/
 }
 
 .txt {
@@ -85,7 +84,7 @@
     width: 45%;
     height: 60px;
     display: block;
-    margin: 45px auto 40px auto;
+    margin: 45px auto 37px auto;
     font-size: 26px;
 }
 #regTxt1{
