@@ -38,7 +38,7 @@ function addPublishDetails(){
                 '<input type="text" id="inputStopOver" class="inputText"/>'+
                 '<input type="button" id="submitButton" class="btn" value="+" onclick="addStopOver()"/>'+
             '</p>'+
-            '<p class="label">'+
+            '<p id="outPutLabel" class="label">'+
                 '<output id="outPutText" /></output>'+
             '</p>' +
             '<p class="label">'+
@@ -61,10 +61,21 @@ function addPublishDetails(){
 }
 var c =0;
 function addStopOver(){
-    var element = $("#inputStopOver");
-    out = element.val();
+    if(c<5){
+        var element = $("#inputStopOver");
+        out = element.val();
+        element.val("");
+        $("#outPutLabel").append('<p><input type="button" class="btn" style="height:22px; width: 40px; margin-left: 270px; margin-top: 5px" value="Clear" onclick="removeItem(c)"></p>');
+        $("#outPutText").append('<p id="'+c+'">'+out+'</p>');
+        //'<input type="button" style="height:50px" value="Clear" '+
+        //'onclick="alert( $("main").hide();)"/></p>');
+        c++;
+    }
+}
+
+function removeItem(target){
+    var element = $("#target");
+    alert(element.val());
     element.val("");
-    $("#outPutText").append('<p id=("a'+c+'")>'+out+'<input type="button" style="height:50px" value="Clear" '+
-    'onclick="alert( $("main").hide();)"/></p>');
-    c++;
+    c--;
 }

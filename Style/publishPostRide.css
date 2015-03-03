@@ -15,14 +15,12 @@
 
 
 .label{
-    /*display: block;*/
     margin-top: 30px;
-    /*margin-bottom: 60px;*/
     width: 100%;
     height: 40px;
     position:relative;
-
 }
+
 .label:nth-of-type(4){
     height: 140px;
 }
@@ -31,6 +29,7 @@
     height:50px;
     margin-bottom: 30px;
 }
+
     .label .text{
         text-align: left;
         width: 25%;
@@ -51,6 +50,7 @@
         font-size:1.3em;
         position: absolute;
     }
+
     .label #outPutText{
         width:48%;
         left:40%;
@@ -82,6 +82,7 @@
         margin-bottom: 40px;
         position: absolute;
     }
+
     .label .clearButton{
         width:20%;
         line-height:50px;
@@ -104,5 +105,9 @@
 }
 
 #inputStopOver{
+
+}
+
+#outPutLabel{
 
 }
