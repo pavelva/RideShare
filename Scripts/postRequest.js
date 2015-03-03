@@ -5,14 +5,9 @@
  * Created by Alex on 3/2/2015.
  */
 
-$(document).ready(function() {
-
-    $(".publishPostRide").append(addPostDetails());
-});
-
-//function changeToPublishRide(){
-//            $(".myRides").slideUp(700);
-//    $(".publishPostRide").append(addPublishDetails());
+//function changeToPostRequest(){
+//    $(".myRides").hide();
+//    $(".publishPostRide").append(addPostDetails());
 //    $(".publishPostRide").show();
 //}
 
