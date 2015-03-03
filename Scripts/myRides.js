@@ -36,12 +36,12 @@ function createRide(ride){
             '<div class="body">' +
                 '<div class="right">' +
                 '<span class="head">Riders:</span>' +
-                (ride.riders.length == 0 ? ' <p class="rider">No Riders On This Ride</p>' :
+                (ride.riders.length == 0 ? ' <p class="rider">No Riders</p>' :
                     createRidersList(ride)) +
                 '</div>' +
                 '<div class="middle">' +
                     '<span class="head">Stops:</span>' +
-                    (ride.stops.length == 0? '<p class="rider">No Stops On This Ride</p>' :
+                    (ride.stops.length == 0? '<p class="rider">No Stops</p>' :
                     createStopList(ride)) +
                 '</div>' +
                 createRidesLeftSide(ride) +
@@ -63,7 +63,7 @@ function createRequest(ride){
             '<div class="body">' +
                 '<div class="right">' +
                     '<span class="head">Riders:</span>' +
-                    (ride.riders.length == 0 ? ' <p class="rider">No Riders On This Ride</p>' :
+                    (ride.riders.length == 0 ? ' <p class="rider">No Riders</p>' :
                         createRidersList(ride)) +
                 '</div>' +
                 createRidesLeftSide(ride) +
