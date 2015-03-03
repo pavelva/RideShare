@@ -1,6 +1,7 @@
 /**
  * Created by Pavel on 24/02/2015.
  */
+
 $(document).ready(function(){
 
 
@@ -11,13 +12,10 @@ $(document).ready(function(){
         updateMyRides(rides[i]);
     //updateCurrentPage(pages.myRides);
 
-    $('.myRides').jScrollPane({
-            horizontalGutter: 0,
-            verticalGutter: 0
-
+    $('main').jScrollPane({
+            verticalGutter: 0,
         }
     );
-
 });
 
 function updateMyRides(ride) {
