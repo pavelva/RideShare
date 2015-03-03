@@ -35,11 +35,11 @@ function addPublishDetails(){
             '</p>'+
             '<p class="label">'+
                 '<span class="text">Stopover :</span>'+
-                '<input type="text" class="inputText"/>'+
-                '<input type="button" class="submitButton btn" value="+"/>'+
+                '<input type="text" id="inputStopOver" class="inputText"/>'+
+                '<input type="button" id="submitButton" class="btn" value="+" onclick="addStopOver()"/>'+
             '</p>'+
             '<p class="label">'+
-                '<output class="outPutText" /></output>'+
+                '<output id="outPutText" /></output>'+
             '</p>' +
             '<p class="label">'+
                 '<span class="text">Date :</span>'+
@@ -55,6 +55,16 @@ function addPublishDetails(){
             '</p>'+
             '<p class="label">'+
                 '<input type="button" class="publishPostButton btn" value="Publish"/>'+
+                '<input type="button" class="clearButton btn" value="Clear"/>'+
             '</p>'+
         '</div>'
+}
+var c =0;
+function addStopOver(){
+    var element = $("#inputStopOver");
+    out = element.val();
+    element.val("");
+    $("#outPutText").append('<p id=("a'+c+'")>'+out+'<input type="button" style="height:50px" value="Clear" '+
+    'onclick="alert( $("main").hide();)"/></p>');
+    c++;
 }
