@@ -23,7 +23,10 @@
                         lastName: users[3].publicData.lastName,
                         id: users[3].publicData.id,
                         ranked: false
-                    }]
+                    }],
+                from: "Beer Sheva",
+                to: "Haifa",
+                stops:["Beit Kama", " Road 6", "Yokneam"]
             },
             {
                 type: 'Request',
@@ -40,6 +43,8 @@
                         lastName: users[0].publicData.lastName,
                         id: users[0].publicData.id,
                     }],
+                from: "Beer Sheva",
+                to: "Krayot",
                 ranked: false
             },
             {
@@ -70,6 +75,8 @@
                         id: users[6].publicData.id,
                         ranked: false
                     }],
+                from: "Beer Sheva",
+                to: "Metula",
                 ranked: false
             },
             {
@@ -81,7 +88,10 @@
                 date: '10/01/2015',
                 fromTime: '19:00',
                 toTime: '21:00',
-                riders: []
+                riders: [],
+                from: "Haifa",
+                to: "Kiryat Shmona",
+                stops:[]
             },
             {
                 type: 'Request',
@@ -111,6 +121,8 @@
                         id: users[8].publicData.id,
                         ranked: false
                     }],
+                from: "Beer Sheva",
+                to: "Tel Aviv",
                 ranked: false
             }]
     },

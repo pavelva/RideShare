@@ -3,7 +3,6 @@
 }
 
 .myRide {
-
     margin: 0 0 5px 0;
 }
 
@@ -45,15 +44,22 @@
 
 .myRide .left {
     display: inline-block;
-    width:60%;
-    background: blue;
+    width:40%;
 }
-
+.myRide .middle{
+    float:right;
+    display: inline-block;
+    width:25%;
+}
 .myRide .right {
     float:right;
     display: inline-block;
-    width:40%;
-    background: red;
+    width:35%;
+}
+
+.myRide .head {
+    display: block;
+    font-weight:bold;
 }
 
 .myRide .rideDetail {
@@ -61,28 +67,20 @@
 }
 
 .myRide .rideDetail .detailHeader {
-    display:block;
-    font-weight:bold;
     margin:0 0 0.5% 0;
 }
 
 .myRide .rideDetail .detailContent {
-    display:block;
     margin-left:1%;
 }
 
-.myRide .riders {
-    width:100%;
-    font-weight:bold;
-}
-
-.myRide .rider {
+.myRide .line {
     width:95%;
     display:block;
     margin:3px 0 0 1%;
 }
 
-.myRide .rider .riderRank {
+.myRide .line .riderRank {
     margin-top:2px;
     padding:0 8px;
     float: right;
