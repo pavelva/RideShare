@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="Style/main.css">
     <link rel="stylesheet" type="text/css" href="Style/myRides.css">
     <link rel="stylesheet" type="text/css" href="Style/userCard.css">
+    <link rel="stylesheet" type="text/css" href="Style/publishPostRide.css">
     <link type="text/css" href="Style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
@@ -19,12 +20,23 @@
     <script type="text/javascript" src="Scripts/jquery/jquery.mousewheel.js"></script>
 
 
-
-        <script type="text/javascript" src="Scripts/myRides.js"></script>
+    <script type="text/javascript" src="Scripts/myRides.js"></script>
+    <script type="text/javascript" src="Scripts/publishRide.js"></script>
+    <script type="text/javascript" src="Scripts/postRequest.js"></script>
     <script type="text/javascript" src="Scripts/global.js"></script>
 
     <script type="text/javascript" src="Scripts/Stubs/users.js"></script>
     <script type="text/javascript" src="Scripts/Stubs/data.js"></script>
+
+    <script type="text/javascript">
+        function changeToMyRide(){
+            $(".publishPostRide").hide();
+            $(".myRides").show();
+        }
+
+
+    </script>
+
 </head>
 <body>
     <header>
@@ -32,10 +44,10 @@
     </header>
     <nav>
         <div class="links">
-            <a href="">My Rides</a>
-            <a href="">Search Ride</a>
-            <a href="">Publish Ride</a>
-            <a href="">Post Request</a>
+            <a href="" onclick="changeToMyRide()">My Rides</a>
+            <a href="" onclick="changeSearchRide()">Search Ride</a>
+            <a href="" onclick="changeToPublishRide()">Publish Ride</a>
+            <a href="" onclick="changeToPostRequest()">Post Request</a>
         </div>
     </nav>
 
@@ -90,6 +102,7 @@
         <main>
 
             <div class="myRides scrolled"></div>
+
 
         </main>
 
