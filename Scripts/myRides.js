@@ -20,9 +20,9 @@ $(document).ready(function(){
 
 function updateMyRides(ride) {
     if (ride.type == 'Ride')
-        $(".myRides").append(createRide(ride));
+        $("#myRides").append(createRide(ride));
     else
-        $(".myRides").append(createRequest(ride));
+        $("#myRides").append(createRequest(ride));
 }
 
 function createRide(ride){
@@ -72,19 +72,24 @@ function createRequest(ride){
 
 function createRidesLeftSide(ride) {
     return '<div class="left">' +
-        '<p class="rideDetail"> ' +
-        '<span class="detailHeader">Driver:</span>' +
-        '<span class="detailContent">' + ride.driver + '</span>' +
-        '</p>' +
-        '<p class="rideDetail"> ' +
-        '<span class="detailHeader">Date:</span>' +
-        '<span class="detailContent">' + ride.date + '</span>' +
-        '</p>' +
-        '<p class="rideDetail"> ' +
-        '<span class="detailHeader">Departure Time:</span>' +
-        '<span class="detailContent">' + ride.fromTime + ' - ' + ride.toTime + '</span> ' +
-        '</p>' +
-        '</div>'
+                '<div calss-"left">' +
+                    '<p class="rideDetail"> ' +
+                    '<span class="detailHeader">Driver:</span>' +
+                    '<span class="detailContent">' + ride.driver + '</span>' +
+                    '</p>' +
+                    '<p class="rideDetail"> ' +
+                    '<span class="detailHeader">Date:</span>' +
+                    '<span class="detailContent">' + ride.date + '</span>' +
+                    '</p>' +
+                    '<p class="rideDetail"> ' +
+                    '<span class="detailHeader">Departure Time:</span>' +
+                    '<span class="detailContent">' + ride.fromTime + ' - ' + ride.toTime + '</span> ' +
+                    '</p>' +
+                '</div>' +
+                '<div class="right">' +
+                "asdasdasd"+
+                '</div>' +
+            '</div>'
 }
 
 function createRidersList(ride) {

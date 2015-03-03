@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif|Montserrat);
 
-*{padding:0;margin:0;border:none;border-collapse:collapse;text-decoration:none;list-style:none}
+*{padding:0;margin:0;border:none;border-collapse:collapse;text-decoration:none;list-style:none; outline:0;}
 a,.a{transition: all .2s linear;-o-transition: all .2s linear;-moz-transition: all .2s linear;-webkit-transition: all .2s linear}
 
 header, main, nav, aside, section{display: block}
@@ -135,6 +135,9 @@ main{
     z-index: 2;
 }
 
+.mainContent{
+    width:99%;
+}
 aside{
     position: absolute;
 }
