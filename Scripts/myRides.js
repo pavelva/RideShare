@@ -13,7 +13,7 @@ $(document).ready(function(){
     //updateCurrentPage(pages.myRides);
 
     $('main').jScrollPane({
-            verticalGutter: 0,
+            verticalGutter: 0
         }
     );
 });
