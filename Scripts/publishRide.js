@@ -132,7 +132,7 @@ window.addEventListener('load', function () {
         dd = '0' + dd;
     }
     today = yyyy+'-'+mm+'-'+dd;
-    document.getElementById("dateInput").defaultValue = today;
+    document.getElementById("dateInput").value = today;
 
     if(hour < 10){
         hour = '0' + hour;
@@ -142,8 +142,8 @@ window.addEventListener('load', function () {
     }
 
     today = hour+':'+minutes;
-    document.getElementById("fromTimeInput").defaultValue = today;
-    document.getElementById("toTimeInput").defaultValue = today;
+    document.getElementById("fromTimeInput").value = today;
+    document.getElementById("toTimeInput").value = today;
 });
 
 function refreshDateAndTime() {
@@ -161,7 +161,7 @@ function refreshDateAndTime() {
         dd = '0' + dd;
     }
     today = yyyy + '-' + mm + '-' + dd;
-    document.getElementById("dateInput").defaultValue = today;
+    document.getElementById("dateInput").value = today;
 
     if (hour < 10) {
         hour = '0' + hour;
@@ -171,6 +171,6 @@ function refreshDateAndTime() {
     }
 
     today = hour + ':' + minutes;
-    document.getElementById("fromTimeInput").defaultValue = today;
-    document.getElementById("toTimeInput").defaultValue = today;
+    document.getElementById("fromTimeInput").value = today;
+    document.getElementById("toTimeInput").value = today;
 }
