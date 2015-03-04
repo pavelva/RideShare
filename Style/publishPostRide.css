@@ -51,19 +51,6 @@
         position: absolute;
     }
 
-    .label #outPutText{
-        width:48%;
-        left:40%;
-        height: 136px;
-        padding-left: 1%;
-        border: 1px solid #484848;
-        border-radius:8px;
-        background: rgba(255,255,255,0.8);
-        font-size:1.2em;
-        position: absolute;
-        color: #50506d;
-    }
-
     .label #submitButton{
         width:5%;
         left:90%;
@@ -93,21 +80,91 @@
         position: absolute;
     }
 
+.outPutText{
+    width:48%;
+    left:40%;
+    height: 136px;
+    padding-left: 1%;
+    border: 1px solid #484848;
+    border-radius:8px;
+    /*background-color: white ;*/
+    /*background: rgba(255,255,255,0.8);*/
+    font-size:1.2em;
+    position: absolute;
+    color: white;
+}
 
-
-.dateInput{
-    width:20% !important;
-
+#dateInput{
+    width: 24% !important;
 }
 
 .timeInput{
-    width:20% !important;
+    width: 24% !important;
 }
 
-#inputStopOver{
-
+.clearBtn{
+    width: 8%;
+    height: 18%;
+    left: 102.7%;
+    background-color: rgba(100,0,0,0);
+    border-radius: 25%;
+    position: absolute;
 }
 
-#outPutLabel{
+.clearBtn:hover{
+    background-color: rgba(100,0,0,0.98);
+}
 
+#firsOut{
+    width: 95%;
+    position: absolute;
+}
+
+#firstButton{
+    top: 1%;
+    display: none;
+}
+
+#secondOut{
+    width: 95%;
+    top: 20%;
+    position: absolute;
+}
+
+#secondButton{
+    top: 21%;
+    display: none;
+}
+
+#thirdOut{
+    top: 40%;
+    width: 95%;
+    position: absolute;
+}
+
+#thirdButton{
+    top: 41%;
+    display: none;
+}
+
+#fourthOut{
+    top: 60%;
+    width: 95%;
+    position: absolute;
+}
+
+#fourthButton{
+    top: 61%;
+    display: none;
+}
+
+#fifthOut{
+    top: 80%;
+    width: 95%;
+    position: absolute;
+}
+
+#fifthButton{
+    top: 81%;
+    display: none;
 }
