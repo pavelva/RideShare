@@ -24,12 +24,13 @@ var pages = {
 };
 
 var curPage = pages.myRides;
+var user;
 
 $(document).ready(function(){
     //init();
-
-    updateUserCard(users[0]);
-    var rides = getMyRides(1);
+    user = users[0];
+    updateUserCard(user);
+    var rides = getMyRides(user.publicData.id);
     for (i in rides)
         updateMyRides(rides[i]);
     //updateCurrentPage(pages.myRides);
