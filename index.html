@@ -31,11 +31,42 @@
 
     <script type="text/javascript">
         function changeToMyRide(){
-            $(".publishPostRide").hide();
-            $(".myRides").show();
+            $("main").slideUp(500, function(){
+                $("#publishPostRide").hide();
+                $("#myRides").show();
+
+                $('main').jScrollPane({
+                            verticalGutter: 0
+                        }
+                );
+
+                $("main").slideDown(500, function(){
+                    $('main').jScrollPane({
+                                verticalGutter: 0
+                            }
+                    );
+                });
+            });
         }
 
+        function changeToPublishRide(){
+            $("main").slideUp(500, function(){
+                $("#myRides").hide();
+                $("#publishPostRide").show();
 
+                $('main').jScrollPane({
+                            verticalGutter: 0
+                        }
+                );
+
+                $("main").slideDown(500, function(){
+//                    $('main').jScrollPane({
+//                                verticalGutter: 0
+//                            }
+//                    );
+                });
+            });
+        }
     </script>
 
 </head>
@@ -107,7 +138,7 @@
         <main>
 
             <div id="myRides" class="mainContent"></div>
-            <!--<div id="publishPostRide" class="mainContent container"></div>-->
+            <div id="publishPostRide" class="mainContent container" style="display:none;"></div>
 
         </main>
 
