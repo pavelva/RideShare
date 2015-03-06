@@ -137,7 +137,24 @@
 
         <main>
 
-            <div id="myRides" class="mainContent"></div>
+            <div id="myRides" class="mainContent">
+                <div class="pageHeader container">
+                    My Rides
+                    <div id="myRidesfilterType">
+                        <input type="button" value="All" class="btn" id="btnMyRidesAll" >
+                        <input type="button" value="Rides" class="btn" id="btnMyRidesRides" >
+                        <input type="button" value="Requests" class="btn" id="btnMyRidesRequests" >
+                    </div>
+
+                    <div id="myRidesfilterStatus">
+                        <input type="button" value="All" class="btn" id="btnMyRidesOpend" >
+                        <input type="button" value="Opened" class="btn" id="btnMyRidesOpend" >
+                        <input type="button" value="Pending" class="btn" id="btnMyRidesPending" >
+                        <input type="button" value="Closed" class="btn" id="btnMyRidesClosed" >
+                    </div>
+
+                </div>
+            </div>
             <div id="publishPostRide" class="mainContent container" style="display:none;"></div>
 
         </main>
