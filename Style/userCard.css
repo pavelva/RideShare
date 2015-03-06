@@ -128,7 +128,7 @@
 .stars{
     position:absolute;
     top:36px;
-    left:115px;
+    left:120px;
     width:100px;
     height:15%;
 }
@@ -161,8 +161,8 @@
     position:absolute;
     width:28px;
     line-height:20px;
-    top:34px;
-    left:220px;
+    top:35px;
+    left:225px;
     font-size: 14px;
     font-weight: bold;
     text-shadow: 1px 1px black;
@@ -178,6 +178,11 @@
     top:60px;
     left:10px;
     font-size: 0.75em;
+}
+
+.smallRating, .ridesCount, .ranksCount{
+    font-weight: bold;
+    font-size: 0.95em;
 }
 /*-----------Update Profile-----------*/
 #userCardControls{
@@ -195,7 +200,7 @@
 }
 
 #btnUpdateProfile{
-    left:10px;
+    left:15px;
 }
 
 #btnLogout{
