@@ -2,31 +2,6 @@
  * Created by Pavel on 24/02/2015.
  */
 
-$(document).ready(function(){
-
-
-    //init();
-
-    var rides = loadMyRides(1);
-    for (i in rides)
-        updateMyRides(rides[i]);
-    //updateCurrentPage(pages.myRides);
-
-    $('main').jScrollPane({
-            verticalGutter: 0
-        }
-    );
-
-    //$("#leftAside").animate({width:"16%"},600,function(){
-    //    $("#leftAside").css("min-width","290px");
-    //});
-    //
-    //$("#rightAside").animate({width:"23%"},600,function(){
-    //    $('main').slideDown(700);
-    //});
-
-});
-
 function updateMyRides(ride) {
     if (ride.type == 'Ride')
         $("#myRides").append(createRide(ride));

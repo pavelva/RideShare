@@ -1,4 +1,4 @@
-﻿var url = "http://localhost:1687/"
+﻿var serverUrl = "http://localhost:63342/RideShare/"
 
 var pages = {
     myRides: {
@@ -25,6 +25,29 @@ var pages = {
 
 var curPage = pages.myRides;
 
+$(document).ready(function(){
+    //init();
+
+    updateUserCard(users[0]);
+    var rides = getMyRides(1);
+    for (i in rides)
+        updateMyRides(rides[i]);
+    //updateCurrentPage(pages.myRides);
+
+    $('main').jScrollPane({
+            verticalGutter: 0
+        }
+    );
+
+    //$("#leftAside").animate({width:"16%"},600,function(){
+    //    $("#leftAside").css("min-width","290px");
+    //});
+    //
+    //$("#rightAside").animate({width:"23%"},600,function(){
+    //    $('main').slideDown(700);
+    //});
+});
+
 function init() {
     jQuery.each(pages, function () {
         unloadCss(this);
@@ -39,7 +62,7 @@ function logout() {
     window.location = 'login.aspx';
 }
 
-function loadMyRides(userID) {
+function getMyRides(userID) {
     for (i in myRides) {
         if (myRides[i].id == userID) {
             return myRides[i].data;
