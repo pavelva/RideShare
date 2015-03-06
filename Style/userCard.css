@@ -2,16 +2,14 @@
 #userCard {
     width: 100%;
     height:100%;
+    position: relative;
 }
 
-#userCardHeader {
-    margin: 1.5% 0 0 0;
-    height:28.5%;
-}
-
-.userContainer {
-    width:70%;
-    float:right;
+.userHeader {
+    width:100%;
+    height:20%;
+    left:88px;
+    position: absolute;
 }
 
 .user {
@@ -20,102 +18,186 @@
 }
 
 #userName {
-    font-size:1.8em;
+    font-size:1em;
     font-weight: bold;
-    height:30px;
+    height:20px;
 }
 
 #userLastName {
-    font-size: 1.6em;
+    height:13px;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
 #userImg {
-    width:25%;
-    margin: 0 5px;
-    background: rgba(255,255,255,0.9);
+    top:2px;
+    left:4px;
+    width:80px;
+    height:80px;
+    background-image: url("../Images/jhonDo.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+#userDetails {
+    height:40px;
+    width:100%;
+}
+
+.detail {
+    width:100%;
+    display: table;
+    height:50%;
+}
+
+.detail1 {
+    display:table-cell;
+    width:13px;
+    height: 100%;
+}
+
+.detail2 {
+    display:table-cell;
+    line-height: 100%;
+    padding: 0 0 0 3px;
+    font-size: 0.75em;
+    vertical-align: middle;
+}
+
+#email{
+    margin: 13px 0 0 0;
+}
+
+#email .detail1{
+    background:url("../Images/at.png") no-repeat 10px 0;
+    background-size:contain ;
+    background-position: center;
+}
+#phone .detail1{
+    background:url("../Images/phone.png") no-repeat 9px 0;
+    background-size:contain;
+    background-position: 100% 45%;
 }
 
 /*-----------User Card -- Ranking -----------*/
-.details {
-    height:20%;
-    width:100%;
-    display: block;
-}
 
 #ranks{
-    height:30%;
+    height:45%;
+    width:100%;
+    top:120px;
+    position:absolute;
 }
 
 #userCardControls{
     height:20%;
+    top:80%;
+    position:absolute;
 }
 
+.rank{
+    height:45%;
+    width:100%;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    position: relative;
+}
 
-.detail {
-    width:94.5%;
-    margin:0 0 0 5.5%;
+.rank:nth-of-type(1){
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+.rank .rankType {
     display: block;
-}
-
-.detail1 {
-    display:inline-block;
-    width:25%;
-    height:30px;
-}
-
-.detail2 {
-    width:75%;
-    height:20px;
-    vertical-align: top;
-}
-
-#email, #phone{
-    margin:0 0 1% 1% !important;
-}
-
-#email .detail1  {
-    background:url("../Images/at.png") no-repeat 10px 0;
-    background-size:22px;
-    width:16%;
-}
-#phone .detail1  {
-    background:url("../Images/phone.png") no-repeat 9px 0;
-    background-size:25px;
-    width:16%;
-}
-
-#ranksHeader {
+    font-size: 1em;
+    top:10px;
+    left:5px;
     height:20%;
-    width:96.5%;
-    margin:0 0 0 3.5%;
-    font-size: 1.4em;
+    width:100%;
+    position:absolute;
 }
 
-#driverRank{
-   margin-bottom: 10px;
+.ratingHeader {
+    font-size: 0.9em;
+    height:15%;
+    width:100px;
+    position: absolute;
+    top:35px;
+    left:10px;
 }
-#ranks .detail1{
-    font-size: 1.2em;
-}
-
-#ranks div{
+.stars{
+    position:absolute;
+    top:36px;
+    left:115px;
+    width:100px;
     height:15%;
 }
 .star {
-    margin:10px 0 0 0;
-    width:20px;
+    display: block;
+    float:left;
+    width:16px;
+    height:16px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 4px;
 }
 
+.stars .full{
+    background-image: url("../Images/fullStar.png");
+}
+
+.stars .half{
+    background-image: url("../Images/halfstar.png");
+}
+
+.stars .empty{
+    background-image: url("../Images/star.png");
+}
 .stars:hover {
     cursor: default;
 }
+
+.totalRating {
+    position:absolute;
+    width:28px;
+    line-height:20px;
+    top:34px;
+    left:220px;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    /*border:1px solid rgba(255,255,255,0.7);*/
+    box-shadow: inset 1px 1px rgba(255,255,255,0.8), 1px 1px rgba(255,255,255,0.5);
+    border-radius: 5px;
+    background: rgba(237,192,56,1);
+}
+
+.rankDetails{
+    position:absolute;
+    top:60px;
+    left:10px;
+    font-size: 0.75em;
+}
 /*-----------Update Profile-----------*/
+#userCardControls{
+    position:absolute;
+    top:330px;
+    width: 100%;
+}
+
 #userCardControls .btn {
-    display:block;
-    margin:5px auto;
-    width:160px;
-    height:45px;
-    border-radius:10px;
-    font-size:18px;
+    position: absolute;
+    width:40%;
+    height:30px;
+    border-radius:2px;
+    font-size:14px;
+}
+
+#btnUpdateProfile{
+    left:10px;
+}
+
+#btnLogout{
+    left:50%;
 }

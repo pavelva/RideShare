@@ -16,6 +16,15 @@ $(document).ready(function(){
             verticalGutter: 0
         }
     );
+
+    //$("#leftAside").animate({width:"16%"},600,function(){
+    //    $("#leftAside").css("min-width","290px");
+    //});
+    //
+    //$("#rightAside").animate({width:"23%"},600,function(){
+    //    $('main').slideDown(700);
+    //});
+
 });
 
 function updateMyRides(ride) {
