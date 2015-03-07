@@ -58,24 +58,22 @@ $(document).ready(function(){
 });
 
 $(window).load(function() {
-    setTimeout(function(){
-        $('body').queue('load',function(){
-            $('nav .links').fadeIn(2000);
-            setTimeout(function(){$('body').dequeue('load');},500);
+    $('body').queue('load',function(){
+        $('nav .links').fadeIn(2000);
+        setTimeout(function(){$('body').dequeue('load');},500);
 
-        }).queue('load',function() {
-            init();
-            $(this).dequeue('load');
-        }).queue('load',function(){
-            $("#leftAside").animate({width:"310px"},600,function(){
-                $('#userCard').fadeIn(200);
-            });
+    }).queue('load',function() {
+        init();
+        $(this).dequeue('load');
+    }).queue('load',function(){
+        $("#leftAside").animate({width:"310px"},600,function(){
+            $('#userCard').fadeIn(200);
+        });
 
-            $("#rightAside").animate({width:"23%"},600,function(){
-                $('main').slideDown(700);
-            });
-        }).dequeue('load');
-    },200);
+        $("#rightAside").animate({width:"23%"},600,function(){
+            $('main').slideDown(700);
+        });
+    }).dequeue('load');
 });
 
 function init() {
