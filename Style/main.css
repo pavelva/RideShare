@@ -47,7 +47,7 @@ header, main, nav, aside, section{display: block}
 .btn{
     display: block;
     background:rgba(62,170,245, 0.8);
-    color:#ced0cc;
+    color:white;
     font-family: 'Montserrat', sans-serif;
     text-shadow:1px 1px black;
     border:1px solid rgba(255,255,255, 0.5) !important;
@@ -56,7 +56,7 @@ header, main, nav, aside, section{display: block}
 
 .btn:hover{
     background:rgba(62,170,245, 1);
-    color:white;
+    color:#ced0cc;
     cursor: pointer;
 }
 
@@ -156,7 +156,7 @@ aside{
 #leftAside{
     left:0;
     height:410px;
-    width: 310px;
+    /*width: 310px;*/
     border-left: none !important;
 }
 
@@ -164,7 +164,7 @@ aside{
     /*left: 73%;*/
     right:0;
     width:0;
-    width: 23% !important;
+    /*width: 23% !important;*/
     height:700px;
 }
 

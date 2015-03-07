@@ -5,10 +5,10 @@
 $(document).ready(function() {
     $("#publishPostRide").append(addPublishDetails());
 
-    $('main').jScrollPane({
-            verticalGutter: 0
-        }
-    );
+    //$('main').jScrollPane({
+    //        verticalGutter: 0
+    //    }
+    //);
 
     //alert($("#publishPostRide").height());
 

@@ -31,11 +31,36 @@ var pages = {
 var curPage = pages.myRides;
 var user;
 
-$(document).ready(function(){
-    init();
 
+$(document).ready(function(){
+    $('nav .links').fadeOut(0);
+    $('#userCard').fadeOut(0);
+    closeAll();
+    //init();
+    setTimeout(function(){
+        $('body').queue('load',function(){
+            $('nav .links').fadeIn(2000);
+            setTimeout(function(){$('body').dequeue('load');},500);
+
+        }).queue('load',function() {
+            init();
+            $(this).dequeue('load');
+        }).queue('load',function(){
+            $("#leftAside").animate({width:"310px"},600,function(){
+                $('#userCard').fadeIn(200);
+            });
+
+            $("#rightAside").animate({width:"23%"},600,function(){
+                $('main').slideDown(700);
+            });
+        }).dequeue('load');
+    },200);
+});
+
+function init() {
     user = users[0];
     updateUserCard(user);
+
     var rides = getMyRides(user.publicData.id);
     for (i in rides)
         updateMyRides(rides[i]);
@@ -45,22 +70,14 @@ $(document).ready(function(){
             verticalGutter: 0
         }
     );
+}
 
-    //$("#leftAside").animate({width:"16%"},600,function(){
-    //    $("#leftAside").css("min-width","290px");
-    //});
-    //
-    //$("#rightAside").animate({width:"23%"},600,function(){
-    //    $('main').slideDown(700);
-    //});
-});
-
-function init() {
+function closeAll() {
     for (page in pages) {
         $('#' + pages[page].containerID).hide();
     }
 
-    curPage = pages.searchRides;
+    curPage = pages.postRequest;
 }
 
 function logout() {
@@ -84,10 +101,12 @@ function updateCurrentPage(page) {
 
     $("main").slideUp(400, function() {
         $('#' + curPage.navigatorID).css("color", "white");
+        $('#' + curPage.navigatorID).hover(function(){$(this).css("color", "#0185fd")}, function(){$(this).css("color", "white")});
         $('#' + curPage.containerID).hide();
 
         curPage = page;
         $('#' + page.navigatorID).css("color", "#edc038");
+        $('#' + curPage.navigatorID).unbind("mouseenter mouseleave");
         $('#' + curPage.containerID).show();
 
         $('main').jScrollPane({
