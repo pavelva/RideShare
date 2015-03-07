@@ -29,46 +29,6 @@
     <script type="text/javascript" src="Scripts/Stubs/users.js"></script>
     <script type="text/javascript" src="Scripts/Stubs/data.js"></script>
 
-    <script type="text/javascript">
-        function changeToMyRide(){
-            $("main").slideUp(500, function(){
-                $("#publishPostRide").hide();
-                $("#myRides").show();
-
-                $('main').jScrollPane({
-                            verticalGutter: 0
-                        }
-                );
-
-                $("main").slideDown(500, function(){
-                    $('main').jScrollPane({
-                                verticalGutter: 0
-                            }
-                    );
-                });
-            });
-        }
-
-        function changeToPublishRide(){
-            $("main").slideUp(500, function(){
-                $("#myRides").hide();
-                $("#publishPostRide").show();
-
-                $('main').jScrollPane({
-                            verticalGutter: 0
-                        }
-                );
-
-                $("main").slideDown(500, function(){
-//                    $('main').jScrollPane({
-//                                verticalGutter: 0
-//                            }
-//                    );
-                });
-            });
-        }
-    </script>
-
 </head>
 <body>
     <header>
@@ -76,10 +36,10 @@
     </header>
     <nav>
         <div class="links">
-            <a onclick="changeToMyRide()">My Rides</a>
-            <a onclick="changeSearchRide()">Search Ride</a>
-            <a onclick="changeToPublishRide()">Publish Ride</a>
-            <a onclick="changeToPostRequest()">Post Request</a>
+            <a id="aMyRides" onclick="updateCurrentPage(pages.myRides)">My Rides</a>
+            <a id="aSearchRide" onclick="updateCurrentPage(pages.searchRides)">Search Ride</a>
+            <a id="aPublishRide" onclick="updateCurrentPage(pages.publishRide)">Publish Ride</a>
+            <a id="aPostRequest" onclick="updateCurrentPage(pages.postRequest)">Post Request</a>
         </div>
     </nav>
 
@@ -156,7 +116,7 @@
 
                 </div>
             </div>
-            <div id="publishPostRide" class="mainContent container" style="display:none;"></div>
+            <div id="publishPostRide" class="mainContent container"></div>
 
         </main>
 
