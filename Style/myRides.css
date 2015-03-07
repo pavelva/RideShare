@@ -4,6 +4,7 @@
 
 #myRides .pageHeader{
     height:65px;
+    border-bottom: none;
 }
 #myRides #myRidesfilterType{
     position: absolute;
@@ -28,6 +29,7 @@
     font-size: 0.35em;
     color: white;
 }
+
 .myRide {
     margin: 0 0 5px 0;
 }
