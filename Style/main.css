@@ -78,7 +78,7 @@ header, main, nav, aside, section{display: block}
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../Images/bg3.png");
+    background-image: url("../Images/bg4.jpg");
     background-size: cover;
     background-position: 40% 50%;
 }
