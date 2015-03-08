@@ -33,28 +33,12 @@ var user;
 
 
 $(document).ready(function(){
-    $('nav .links').fadeOut(0);
-    $('#userCard').fadeOut(0);
+    $('nav .links').hide();
+    $('#userCard').hide();
+    $('#notifications *').hide();
+    //$('.updatesIcon').hide();
     closeAll();
     //init();
-    //setTimeout(function(){
-    //    $('body').queue('load',function(){
-    //        $('nav .links').fadeIn(2000);
-    //        setTimeout(function(){$('body').dequeue('load');},500);
-    //
-    //    }).queue('load',function() {
-    //        init();
-    //        $(this).dequeue('load');
-    //    }).queue('load',function(){
-    //        $("#leftAside").animate({width:"310px"},600,function(){
-    //            $('#userCard').fadeIn(200);
-    //        });
-    //
-    //        $("#rightAside").animate({width:"23%"},600,function(){
-    //            $('main').slideDown(700);
-    //        });
-    //    }).dequeue('load');
-    //},200);
 });
 
 $(window).load(function() {
@@ -69,9 +53,13 @@ $(window).load(function() {
         $("#leftAside").animate({width:"310px"},600,function(){
             $('#userCard').fadeIn(200);
         });
-
         $("#rightAside").animate({width:"23%"},600,function(){
-            $('main').slideDown(700);
+            $('#notifications *').fadeIn(200);
+            $('#notifications').jScrollPane({
+                    verticalGutter: 0,
+                    horizontalGutter: 0
+                }
+            );
         });
     }).dequeue('load');
 });
@@ -85,10 +73,6 @@ function init() {
         updateMyRides(rides[i]);
     updateCurrentPage(pages.myRides);
 
-    $('main').jScrollPane({
-            verticalGutter: 0
-        }
-    );
 }
 
 function closeAll() {

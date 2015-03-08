@@ -2,10 +2,6 @@
  * Created by Pavel on 06/03/2015.
  */
 
-$(document).ready(function(){
-
-});
-
 function updateUserCard(user){
     loadUserImage(user);
     loadUserDetails(user);
