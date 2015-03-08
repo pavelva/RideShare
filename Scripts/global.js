@@ -41,6 +41,14 @@ $(document).ready(function(){
     //init();
 });
 
+$(window).resize(function(){
+    $('#notifications').jScrollPane({
+            verticalGutter: 0,
+            horizontalGutter: 0
+        }
+    );
+});
+
 $(window).load(function() {
     $('body').queue('load',function(){
         $('nav .links').fadeIn(2000);
@@ -50,7 +58,8 @@ $(window).load(function() {
         init();
         $(this).dequeue('load');
     }).queue('load',function(){
-        $("#leftAside").animate({width:"310px"},600,function(){
+        $("#leftAside").animate({width:"23%"},600,function(){
+            $("#leftAside").css({minWidth:"310px"});
             $('#userCard').fadeIn(200);
         });
         $("#rightAside").animate({width:"23%"},600,function(){

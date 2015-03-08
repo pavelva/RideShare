@@ -84,7 +84,7 @@ function createRidersList(ride) {
     for (i in ride.riders) {
         ans += '<p class="line">' +
         (ride.type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="btn riderRank a" value="Rank"/>' : '') +
-        '<span>' +
+        '<span style="display:block;border:1px solid rgba(255,255,255,0);">' +
         ride.riders[i].name + ' ' + ride.riders[i].lastName +
         '</span>' +
         '</p>';
