@@ -9,6 +9,10 @@
 
 }
 
+#updates .jspHorizontalBar{
+    display:none;
+}
+
 .updatesIcon{
     display: block;
     float:right;
