@@ -12,6 +12,7 @@
     <script type="text/javascript" src="Scripts/jquery/jquery-ui.js"></script>
     <script type="text/javascript" src="Scripts/myRides.js"></script>
     <script type="text/javascript" src="Scripts/global.js"></script>
+    <script type="text/javascript" src="Scripts/register.js"></script>
 
     <script type="text/javascript" src="Scripts/Stubs/users.js"></script>
     <script type="text/javascript" src="Scripts/Stubs/data.js"></script>
@@ -43,30 +44,30 @@
             <div id="registerContent">
                 <p class="userDetails">
                     <span class="label">First Name:</span>
-                    <input type="text" class="txt" />
+                    <input type="text" id="regFName" class="txt" />
                 </p>
                 <p class="userDetails">
                     <span class="label">Last Name:</span>
-                    <input type="text" class="txt" />
+                    <input type="text" id="regLName" class="txt" />
                 </p>
                 <p class="userDetails">
                     <span class="label">Email:</span>
-                    <input type="email" class="txt" />
+                    <input type="email" id="regEmail" class="txt" />
                 </p>
                 <p class="userDetails">
                     <span class="label">Phone Number:</span>
-                    <input type="tel" class="txt" />
+                    <input type="tel"  id="regPhone" class="txt" />
                 </p>
                 <p class="userDetails">
                     <span class="label">Password:</span>
-                    <input type="password" class="txt" />
+                    <input type="password" id="regPass" class="txt" />
                 </p>
                 <p class="userDetails">
                     <span class="label">Verify Password:</span>
-                    <input type="password" class="txt" />
+                    <input type="password" id="regVerPass" class="txt" />
                 </p>
                 <p class="userDetails">
-                    <input type="button" class="button btn" value="Register"/>
+                    <input type="button" class="button btn" value="Register" onclick="userRegister()"/>
                 </p>
             </div>
         </div>
