@@ -14,7 +14,7 @@ var pages = {
     },
     publishRide: {
         navigatorID: 'aPublishRide',
-        containerID: 'publishPostRide',
+        containerID: 'publishRide',
         loadFunction: function(){}
     },
     searchRides: {
