@@ -1,4 +1,4 @@
-﻿var serverUrl = "http://localhost:63342/RideShare/"
+﻿var serverUrl = "http://localhost:63342/RideShare/";
 
 var pages = {
     myRides: {
