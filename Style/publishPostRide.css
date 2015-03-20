@@ -88,7 +88,7 @@
 }
 
 #publishContent  .label:nth-last-child(1){
-    background-color: #50506d;
+    /*background-color: #50506d;*/
     margin-top: 8.5%;
 }
     .label .text{
