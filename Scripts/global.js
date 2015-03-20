@@ -9,6 +9,7 @@ var pages = {
                     verticalGutter: 0
                 }
             );
+            myRidesScrollerApi = $('main').data('jsp');
         }
     },
     publishRide: {
@@ -28,15 +29,17 @@ var pages = {
     }
 };
 
-var curPage = pages.myRides;
-var user;
 
+var curPage = pages.myRides;
+var popup;
+var user;
+var rides;
 
 $(document).ready(function(){
     $('nav .links').hide();
     $('#userCard').hide();
     $('#notifications *').hide();
-    //$('.updatesIcon').hide();
+    $('.updatesIcon').hide();
     closeAll();
     //init();
 });
@@ -69,17 +72,24 @@ $(window).load(function() {
                     horizontalGutter: 0
                 }
             );
+
+            //alert('futerRides:' + $('#futureRides').width() + ' ' +
+            //' updates:' + $('#updates').width() +
+            //' rightAside:' + $('#rightAside').css('left')+
+            //' leftAside:' + $('#leftAside').css('left'));
         });
     }).dequeue('load');
 });
 
 function init() {
+    popup = $('#popup');
+    popup.click(closePopup);
+
     user = users[0];
     updateUserCard(user);
 
-    var rides = getMyRides(user.publicData.id);
-    for (i in rides)
-        updateMyRides(rides[i]);
+    initMyRidesPage();
+
     updateCurrentPage(pages.myRides);
 
 }
@@ -93,8 +103,11 @@ function closeAll() {
 }
 
 function logout() {
-    window.location = 'login.aspx';
+    user = '';
+    rides = '';
+    window.location = 'login.html';
 }
+
 
 function getMyRides(userID) {
     for (i in myRides) {
@@ -131,22 +144,35 @@ function updateCurrentPage(page) {
 
 }
 
-//function unloadCss(page) {
-//    var links = document.getElementsByTagName('head')[0].getElementsByTagName('link');
-//
-//    for (link in links) {
-//        if(links[link].id == page.cssID){
-//            links[link].disabled = true;
-//        }
-//    }
-//}
-//
-//function loadCss(page) {
-//    var links = document.getElementsByTagName('head')[0].getElementsByTagName('link');
-//
-//    for (link in links) {
-//        if (links[link].id == page.cssID) {
-//            links[link].disabled = false;
-//        }
-//    }
-//}
+function loadPopup(content){
+    popup.empty();
+    var children, height, width, top, left;
+
+    $.when(popup.append(content)).then(function(){
+        children = popup.children();
+        height = children.height();
+        width = children.width();
+        top = children.css('top');
+        left = children.css('left');
+        children.css({'height' : '0', 'width' : '0', 'top' : '40%' , 'left' : '50%'});
+        popup.children().click(function(e){return false;});
+        children.children().hide();
+    }).then(function(){
+        popup.fadeIn(200);
+    }).then(function(){
+        children.animate({
+            'width' : width + '%', 'left' : left + '%'
+        }).animate({
+            'height':height + '%', 'top' : top + '%'
+        });
+    }).then(function(){
+        setTimeout(function(){
+            children.children().fadeIn(50);
+        }, 750);
+    });
+    //popup.append(content).done(function(){alert(1);}).fadeIn(200);
+}
+
+function closePopup(){
+    popup.fadeOut(200);
+}

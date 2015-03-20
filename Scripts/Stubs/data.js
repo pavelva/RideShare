@@ -30,7 +30,7 @@
             },
             {
                 type: 'Request',
-                status: 'Opend',
+                status: 'Open',
                 id: '2222',
                 driver: 'Arnold Schwarzenegger',
                 driverID: 3,
@@ -41,7 +41,7 @@
                     {
                         name: users[0].publicData.name,
                         lastName: users[0].publicData.lastName,
-                        id: users[0].publicData.id,
+                        id: users[0].publicData.id
                     }],
                 from: "Beer Sheva",
                 to: "Krayot",
@@ -81,7 +81,7 @@
             },
             {
                 type: 'Ride',
-                status: 'Opend',
+                status: 'Open',
                 id: '4444',
                 driver: 'Avi Moshe',
                 driverID: 1,
@@ -96,7 +96,7 @@
             {
                 type: 'Request',
                 status: 'Done',
-                id: '3333',
+                id: '5555',
                 driver: 'Sara Netanyahu',
                 driverID: 8,
                 date: '11/01/2015',

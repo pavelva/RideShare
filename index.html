@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="Style/userCard.css">
     <link rel="stylesheet" type="text/css" href="Style/publishPostRide.css">
     <link rel="stylesheet" type="text/css" href="Style/updates.css">
+    <link rel="stylesheet" type="text/css" href="Style/popup.css">
     <link type="text/css" href="Style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
 
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
@@ -91,7 +92,7 @@
                 </div>
                 <div id="userCardControls">
                     <input type="button" id="btnUpdateProfile" class="btn a" value="Update Profile"/>
-                    <input type="button" id="btnLogout" class="btn a" value="Logout"/>
+                    <input type="button" id="btnLogout" class="btn a" value="Logout" onclick="logout()"/>
                 </div>
             </div>
         </aside>
@@ -102,17 +103,17 @@
                 <div class="pageHeader container">
                     My Rides
                     <div id="myRidesfilterType">
-                        <input type="button" value="All" class="btn" id="btnMyRidesAll" >
-                        <input type="button" value="Rides" class="btn" id="btnMyRidesRides" >
-                        <input type="button" value="Requests" class="btn" id="btnMyRidesRequests" >
+                        <input type="button" value="All" class="btn filterTypeBtn" id="btnMyRidesAll" >
+                        <input type="button" value="Rides" class="btn filterTypeBtn" id="btnMyRidesRides" >
+                        <input type="button" value="Requests" class="btn filterTypeBtn" id="btnMyRidesRequests" >
                     </div>
 
                     <div id="myRidesfilterStatus">
-                        <input type="button" value="All" class="btn" id="btnMyRidesOpend" >
-                        <input type="button" value="Done" class="btn" id="btnMyRidesDone" >
-                        <input type="button" value="Opened" class="btn" id="btnMyRidesOpend" >
-                        <input type="button" value="Pending" class="btn" id="btnMyRidesPending" >
-                        <input type="button" value="Closed" class="btn" id="btnMyRidesClosed" >
+                        <input type="button" value="All" class="btn filterStatusBtn" id="btnMyRidesStatusAll" >
+                        <input type="button" value="Done" class="btn filterStatusBtn" id="btnMyRidesStatusDone" >
+                        <input type="button" value="Open" class="btn filterStatusBtn" id="btnMyRidesStatusOpen">
+                        <input type="button" value="Pending" class="btn filterStatusBtn" id="btnMyRidesStatusPending" >
+                        <input type="button" value="Closed" class="btn filterStatusBtn" id="btnMyRidesStatusClosed" >
                     </div>
 
                 </div>
@@ -131,40 +132,52 @@
                     <div class="notification">
                         <span class="title">This Is The Title</span>
                         <span class="body">This Is The Body. La La La. This Is The First</span>
+                        <input type="button" value="X" class="deleteNotification">
                     </div>
                     <div class="notification">
                         <span class="title">Ride It Bitch!</span>
                         <span class="body">This Is The Body. This Is The Day To Go And Make A New Ride</span>
+                        <input type="button" value="X" class="deleteNotification">
                     </div>
                     <div class="notification">
                         <span class="title">This Is The Title</span>
                         <span class="body">This Is The Body. La La La</span>
-                    </div>
-                    <div class="notification">
-                        <span class="body">This Is The Body. La La La</span>
-                    </div>
-                    <div class="notification">
-                        <span class="title">This Is The Title</span>
-                        <span class="body">This Is The Body. La La La</span>
+                        <input type="button" value="X" class="deleteNotification">
                     </div>
                     <div class="notification">
                         <span class="title">This Is The Title</span>
                         <span class="body">This Is The Body. La La La</span>
+                        <input type="button" value="X" class="deleteNotification">
                     </div>
                     <div class="notification">
                         <span class="title">This Is The Title</span>
                         <span class="body">This Is The Body. La La La</span>
+                        <input type="button" value="X" class="deleteNotification">
+                    </div>
+                    <div class="notification">
+                        <span class="title">This Is The Title</span>
+                        <span class="body">This Is The Body. La La La</span>
+                        <input type="button" value="X" class="deleteNotification">
+                    </div>
+                    <div class="notification">
+                        <span class="title">This Is The Title</span>
+                        <span class="body">This Is The Body. La La La</span>
+                        <input type="button" value="X" class="deleteNotification">
                     </div>
                     <div class="notification">
                         <span class="title">This Is The Title</span>
                         <span class="body">This Is The Body. La La La. This Is The Last</span>
-                    </div>    <span class="title">This Is The Title</span>
+                        <input type="button" value="X" class="deleteNotification">
+                    </div>
 
                 </div>
                 <div id="futureRides" class="container">ToDo - Future Rides</div>
             </div>
         </aside>
+
+
     </div>
-    <footer></footer>
+    <div id="popup"></div>
+    <!--<footer></footer>-->
 </body>
 </html>

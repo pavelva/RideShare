@@ -132,6 +132,7 @@ nav a:hover{
     width:100%;
     margin:0 auto;
     height: 800px;
+    z-index: 1;
     position: relative;
 
 }
@@ -178,6 +179,7 @@ footer {
     font-size: 1.1em;
     margin-top:50px;
 }
+
 
 @media (max-width: 1600px){
     body{

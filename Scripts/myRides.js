@@ -1,17 +1,45 @@
 /**
  * Created by Pavel on 24/02/2015.
  */
+var filterStatus;
+var filterType;
+
+var myRidesObjects = [];
+var myRidesScrollerApi;
+
+var timeInterval = 400;
+function updateScroll(){
+    setTimeout(function(){
+        myRidesScrollerApi.reinitialise();
+        $('main .jspVerticalBar').css('display','none');
+        $('main .jspVerticalBar').slideDown(timeInterval);
+    },timeInterval);
+}
+
+function initMyRidesPage(){
+    initMyRidesFilters();
+
+    rides = getMyRides(user.publicData.id);
+    for (i in rides)
+        updateMyRides(rides[i]);
+
+    filterStatus = function(obj){return true;};
+    filterType = function(obj){return true;};
+}
 
 function updateMyRides(ride) {
-    if (ride.type == 'Ride')
-        $("#myRides").append(createRide(ride));
-    else
-        $("#myRides").append(createRequest(ride));
+    $('#myRides').resize(function(){alert(1);});
+    if (ride.type == 'Ride') {
+        createRide(ride);
+    }
+    else {
+        createRequest(ride);
+    }
 }
 
 function createRide(ride){
-    return "" +
-        '<div class="myRide container">' +
+    var rd = "" +
+        '<div class="myRide container" id="rd' + ride.id + '">' +
             '<div class="header">' +
                 '<span class="type">' + ride.type +'</span>' +
                 '<span class="route">' + ride.from + ' - ' + ride.to + '</span>' +
@@ -31,14 +59,25 @@ function createRide(ride){
                 createRidesLeftSide(ride) +
             '</div>' +
             '<div class="controls">' +
-                (ride.status != 'Done'?'<input type="button" class="btn control a" value="Update Ride"/>':'') +
+                (ride.status != 'Done'?'<input id="updateRideBtn' + ride.id+ '" type="button" class="btn control a" value="Update Ride"/>':'') +
             '</div>' +
         '</div>';
+    $("#myRides").append(rd);
+
+    if(ride.status != 'Done'){
+        $('#updateRideBtn' + ride.id).click(function(){
+            var content = '<div>' + ride.from + '</div>';
+            loadPopup(content);
+        });
+    }
+
+    var curObject = $('#rd' + ride.id);
+    myRidesObjects.push({object: curObject, type: 'ride', status: ride.status});
 }
 
 function createRequest(ride){
-    return "" +
-        '<div class="myRide container">' +
+    var rq =   "" +
+        '<div class="myRide container" id="rq' + ride.id+ '">' +
             '<div class="header">' +
                 '<span class="type">' + ride.type + '</span>' +
                 '<span class="route">' + ride.from + ' - ' + ride.to + '</span>' +
@@ -53,10 +92,43 @@ function createRequest(ride){
                 createRidesLeftSide(ride) +
             '</div>' +
             '<div class="controls">' +
-                (ride.status != 'Done' ? '<input type="button" class="btn control a" value="Update Request"/>' : '') +
-                (ride.status == 'Done' && !ride.ranked ? '<input type="button" class="btn control a" value="Rank Ride"/>' : '') +
+                (ride.status != 'Done' ? '<input id="updateRequestBtn' + ride.id + '" type="button" class="btn control a" value="Update Request"/>' : '') +
+                (ride.status == 'Done' && !ride.ranked ? '<input id="rankRideBtn' + ride.id + '" type="button" class="btn control a" value="Rank Ride"/>' : '') +
             '</div>' +
         '</div>';
+    $("#myRides").append(rq);
+
+    if(ride.status == 'Done'){
+        $('#rankRideBtn' + ride.id).click(function(){
+            var content = '<div class="rankRide">' +
+                '<h2 class="header">Rank Ride</h2>' +
+                '<div class="details">' +
+                    '<p class="content">To: ' + ride.to + '</p>' +
+                    '<p class="content">From: ' + ride.from + '</p>' +
+                    '<p class="content">Driver: ' + ride.driver + '</p>' +
+                    '<p class="content">On: ' + ride.date + '</p>' +
+                '</div>' +
+                '<div class="stars">' +
+                    '<span class="star" id="rank5"></span>' +
+                    '<span class="star" id="rank4"></span>' +
+                    '<span class="star" id="rank3"></span>' +
+                    '<span class="star" id="rank2"></span>' +
+                    '<span class="star" id="rank1"></span>' +
+                '</div>'+
+                '<input type="button" class="btn control a" value="Save"/>' +
+                '<input type="button" class="btn control a" value="Close" onclick="closePopup()" autofocus/>' +
+              '</div>';
+            loadPopup(content);
+
+            var saveBtn = $("#popup .rankRide input:nth-of-type(1)");
+            saveBtn.click(function(){
+
+            });
+        });
+    }
+
+    var curObject = $('#rq' + ride.id);
+    myRidesObjects.push({object: curObject, type: 'request', status: ride.status});
 }
 
 function createRidesLeftSide(ride) {
@@ -104,3 +176,71 @@ function createStopList(ride){
 
     return ans;
 }
+
+// ---------FILTERS-----------
+function initMyRidesFilters(){
+    $("#btnMyRidesAll").css('color', 'white');
+    $("#btnMyRidesStatusAll").css('color', 'white');
+    $("#btnMyRidesAll").click(function(){
+        filterType = function(obj){return true;};
+        filter($(this), 'filterTypeBtn');
+    });
+
+    $("#btnMyRidesRides").click(function(){
+        filterType = function(obj){return obj.type == 'ride';};
+        filter($(this), 'filterTypeBtn');
+    });
+
+    $("#btnMyRidesRequests").click(function(){
+        filterType = function(obj){return obj.type == 'request';};
+        filter($(this), 'filterTypeBtn');
+    });
+
+    $("#btnMyRidesStatusAll").click(function(){
+        filterStatus = function(obj){return true;};
+        filter($(this), 'filterStatusBtn');
+    });
+
+    $("#btnMyRidesStatusDone").click(function(){
+        filterStatus = function(obj){return obj.status == 'Done'};
+        filter($(this), 'filterStatusBtn');
+    });
+
+    $("#btnMyRidesStatusOpen").click(function(){
+        filterStatus = function(obj){return obj.status == 'Open'};
+        filter($(this), 'filterStatusBtn');
+    });
+
+    $("#btnMyRidesStatusPending").click(function(){
+        filterStatus = function(obj){return obj.status == 'Pending'};
+        filter($(this), 'filterStatusBtn');
+    });
+
+    $("#btnMyRidesStatusClosed").click(function(){
+        filterStatus = function(obj){return obj.status == 'Closed'};
+        filter($(this), 'filterStatusBtn');
+    });
+}
+
+function filter(btn, btnClass){
+    $('main .jspVerticalBar').slideUp();
+    filterAll(btnClass);
+    btn.css('color', 'white');
+    setTimeout(function(){
+        myRidesObjects.forEach(function(obj){
+            if(filterType(obj) && filterStatus(obj)) {
+                obj.object.fadeIn(timeInterval);
+            }
+        });
+        updateScroll();
+    }, timeInterval);
+}
+
+function filterAll(btnClass){
+    $('.' + btnClass).css('color','#ced0cc')
+    myRidesObjects.forEach(function(req){
+        req.object.fadeOut(timeInterval-100);
+    });
+}
+
+
