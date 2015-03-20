@@ -168,6 +168,10 @@ input[type='radio'] + label {
     width: 30%;
 }
 
+#postPriceInput{
+    width: 30%;
+}
+
 .outPutTextSourceDest{
     width:84%;
     left:1%;
