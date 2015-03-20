@@ -1,8 +1,3 @@
-#publishPostRide{
-    /*width: 98%;*/
-    /*display: none;*/
-}
-
 .publishPostRideHeader{
     width: 45%;
     margin-left: 27.5%;
@@ -13,99 +8,221 @@
     border-bottom: 1px solid white;
 }
 
+#publishContent{
+    height: 680px;
+    color: #3eaaf5;
+    margin-top: 20px;
+}
+
+#postContent{
+    height: 480px;
+    color: #3eaaf5;
+    margin-top: 20px;
+}
+
+#publishContentLeft{
+    width: 50%;
+    margin-left: 3%;
+    position: relative;
+    /*background-color: #0185fd;*/
+    height: 80%;
+
+}
+
+#postContentLeft{
+    width: 50%;
+    margin-left: 3%;
+    position: relative;
+    /*background-color: #0185fd;*/
+    height: 80%;
+
+}
+
+#publishContentRight{
+    width: 45%;
+    /*background-color: #50506d;*/
+    float: right;
+    margin-left: 30px;
+    height: 80%;
+}
+
+#postContentRight{
+    width: 45%;
+    /*background-color: #50506d;*/
+    float: right;
+    margin-left: 30px;
+    height: 80%;
+}
 
 .label{
-    margin-top: 30px;
-    width: 100%;
-    height: 40px;
-    position:relative;
+    margin-bottom: 20px;
+    width: 99%;
+    height: 55px;
+    max-height: 140px;
+    position: relative;
 }
 
-.label:nth-of-type(4){
-    height: 140px;
+.stopOverLabel{
+    /*border: 1px solid green;*/
+    margin-bottom: 1px;
+    padding-left: 1%;
+    width: 97%;
+    height: 50px;
+    position: relative;
+    /*border-bottom: 1px solid red;*/
+}
+.label:nth-child(4){
+    margin-top: 20%;
 }
 
-.label:last-of-type{
-    height:50px;
-    margin-bottom: 30px;
+.label:nth-child(5){
+    margin-top: 12% !important;
 }
 
+#postContentRight .label:nth-child(4){
+    margin-top: 11.9% !important;
+}
+
+#postContent .label:nth-last-child(1){
+    margin-top: 1%;
+}
+
+#publishContent  .label:nth-last-child(1){
+    background-color: #50506d;
+    margin-top: 8.5%;
+}
     .label .text{
         text-align: left;
-        width: 25%;
-        line-height: 40px;
-        left:10%;
-        font-size: 1.3em;
+        width: 40%;
+        line-height: 25px;
+        left:1%;
+        font-size: 1.1em;
         position: absolute;
     }
 
     .label .inputText{
-        width:48%;
+        width:85%;
         padding-left: 1%;
-        left:40%;
-        line-height:38px;
+        left:1%;
+        line-height:1.3em;
         border: 1px solid #484848;
-        border-radius:8px;
+        border-radius: 6px;
         background: rgba(255,255,255,0.8);
-        font-size:1.3em;
+        font-size: 1.1em;
+        top: 50%;
         position: absolute;
     }
 
+
     .label #submitButton{
-        width:5%;
+        width:6.5%;
+        height: 48%;
         left:90%;
-        line-height:38px;
-        font-size:26px;
-        border-radius: 10px !important;
+        top:50%;
+        line-height:1.4em;
+        font-size:1.1em;
+        border-radius: 6px !important;
         position: absolute;
     }
 
     .label .publishPostButton{
-        width:20%;
-        line-height:50px;
-        font-size:22px;
-        border-radius: 10px !important;
-        left: 25%;
-        margin-bottom: 40px;
+        width:16%;
+        line-height:35px;
+        font-size:18px;
+        border-radius: 4px !important;
+        left: 56%;
+        margin-top: 10px;
         position: absolute;
     }
 
-    .label .clearButton{
-        width:20%;
-        line-height:50px;
-        font-size:22px;
-        border-radius: 10px !important;
-        left: 55%;
-        margin-bottom: 40px;
+    .label .clearAllDataButton{
+        width:16%;
+        line-height:35px;
+        font-size:18px;
+        border-radius: 4px !important;
+        left: 76%;
+        margin-top: 10px;
         position: absolute;
     }
 
-.outPutText{
-    width:48%;
-    left:40%;
-    height: 136px;
+.radioInput{
+    margin-top: 10%;
+    margin-left: 2%;
+    font-size: 0.8em;
+}
+input[type='radio'] {
+    transform: scale(1.5);
+}
+
+input[type=radio]:checked + label {
+    color: rgba(237,192,56,1);
+}
+
+input[type='radio'] + label {
+    color: white;
+    font-size: large;
+    margin: 0 1em 0 0.2em;
+}
+
+#priceInput{
+    width: 30%;
+}
+
+.outPutTextSourceDest{
+    width:84%;
+    left:1%;
+    height: 7%;
     padding-left: 1%;
     border: 1px solid #484848;
     border-radius:8px;
-    font-size:1.2em;
+    font-size:1em;
+    position: absolute;
+    color: white;
+}
+
+#sourceOutDiv{
+    margin-top: 3%;
+
+}
+#sourceOut{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+#destOutDiv{
+    margin-top: 81%;
+}
+#destOut{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.outPutText{
+    margin-top: 14%;
+    width:84%;
+    left:1%;
+    height: 50%;
+    padding-left: 1%;
+    border: 1px solid #484848;
+    border-radius:8px;
+    font-size:1em;
     position: absolute;
     color: white;
 }
 
 #dateInput{
-    width: 24% !important;
+    width: 55% !important;
 }
 
 .timeInput{
-    width: 24% !important;
+    width: 55% !important;
 }
 
 .clearBtn{
-    width: 8%;
-    height: 18%;
-    left: 102.7%;
+    width: 6%;
+    height: 8%;
+    left: 103.9%;
     background-color: rgba(100,0,0,0);
-    border-radius: 25%;
+    border-radius: 6px;
     position: absolute;
 }
 
@@ -113,56 +230,112 @@
     background-color: rgba(100,0,0,0.98);
 }
 
-#firsOut{
+.stopOverOut{
+    /*border: 1px solid red;*/
     width: 95%;
+    top: 12%;
     position: absolute;
+
+}
+
+.stopOverOutDetails{
+    /*border: 1px solid blue;*/
+    width: 97%;
+    top: 60%;
+    position: absolute;
+    border-bottom: 1px solid white;
+
+}
+#stopOverLabelFirst{
+    display: none;
+}
+#stopOverLabelSecond{
+    display: none;
+}
+#stopOverLabelThird{
+    display: none;
+}
+#stopOverLabelFourth{
+    display: none;
+}
+#stopOverLabelFifth{
+    display: none;
+}
+
+.stopTimeSpan{
+    margin-left: 1%;
+}
+
+.stopTimeInput{
+    color: black;
+    background: rgba(255,255,255,0.8);
+    border: 2px solid white;
+    border-radius: 6px;
+    margin-right: 7%;
+    width: 10% !important;
+    font-size: 90%;
+    text-align: center;
+}
+
+.stopPriceSpan{
+
+}
+
+.stopPriceInput{
+    color: white;
+    background: #3eaaf5;/*rgba(255,255,255,0.8);*/
+    border: 2px solid white;
+    border-radius: 6px;
+    /*margin-right: 30%;*/
+    width: 10% !important;
+    font-size: 90%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+#firsOut{
+}
+#firsOutDetails{
 }
 
 #firstButton{
-    top: 1%;
+    top: 6%;
     display: none;
 }
 
 #secondOut{
-    width: 95%;
-    top: 20%;
-    position: absolute;
 }
 
 #secondButton{
-    top: 21%;
+    top: 26%;
     display: none;
 }
 
 #thirdOut{
-    top: 40%;
-    width: 95%;
-    position: absolute;
 }
 
 #thirdButton{
-    top: 41%;
+    top: 45%;
     display: none;
 }
 
 #fourthOut{
-    top: 60%;
-    width: 95%;
-    position: absolute;
 }
 
 #fourthButton{
-    top: 61%;
+    top: 64%;
     display: none;
 }
 
 #fifthOut{
-    top: 80%;
-    width: 95%;
-    position: absolute;
 }
 
 #fifthButton{
-    top: 81%;
+    top: 84%;
     display: none;
+}
+
+.radioDiv{
+    margin-top: 30%;
+    width: 80%;
 }
