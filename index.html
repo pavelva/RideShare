@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="Style/main.css">
     <link rel="stylesheet" type="text/css" href="Style/myRides.css">
     <link rel="stylesheet" type="text/css" href="Style/userCard.css">
+    <link rel="stylesheet" type="text/css" href="Style/searchRide.css">
     <link rel="stylesheet" type="text/css" href="Style/publishPostRide.css">
     <link rel="stylesheet" type="text/css" href="Style/updates.css">
     <link rel="stylesheet" type="text/css" href="Style/popup.css">
@@ -26,6 +27,7 @@
     <script type="text/javascript" src="Scripts/userCard.js"></script>
     <script type="text/javascript" src="Scripts/publishRide.js"></script>
     <script type="text/javascript" src="Scripts/postRequest.js"></script>
+    <script type="text/javascript" src="Scripts/searchRide.js"></script>
     <script type="text/javascript" src="Scripts/global.js"></script>
 
     <script type="text/javascript" src="Scripts/Stubs/users.js"></script>
@@ -118,6 +120,75 @@
 
                 </div>
             </div>
+
+            <div id="searchRide" class="mainContent">
+                <div class="pageHeader container">
+                    Search Ride
+                    <div id="searchInputCntent">
+                        <div id="destTextDiv" class="searchRideLocations">
+                            <p class="label">
+                                <span class="text searchText">Destanation :</span>
+                                <input type="text" name="searchInput" id="destinationSearchInput" class="inputText" placeholder="Heifa" />
+                            </p>
+                        </div>
+                        <div id="midlleText" class="searchRideLocations">
+                            <input type="button" value="->|<-" class="btn filterStatusBtn" id="reverseDirection" onclick="reverseDirection()"/>
+                        </div>
+                        <div id="sourceTextDiv" class="searchRideLocations">
+                            <p class="label">
+                                <span class="text searchText">Source :</span>
+                                <input type="text" name="searchInput" id="sourceSearchInput" class="inputText" placeholder="Beer Sheva" />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="searchBtnDiv" class="searchRideLocations">
+                        <p class="label">
+                            <input type="button" value="Search" class="btn" id="searchBtn" >
+                        </p>
+                    </div>
+                        <div id="priceDiv" class="searchRideLocations">
+                            <p class="label">
+                                <span class="text searchText">Max Price :</span>
+                                <input type="number" name="searchInput" class="inputText" placeholder="40" />
+                            </p>
+                        </div>
+                        <div id="radioDiv" class="searchRideLocations">
+                            <div class="label">
+                                <span class="text searchText">Smoking :</span>
+                                <div id="radioDiv2">
+                                    <input type="radio" class="radioInput" id="searchSmokeYes" name="searchRadio" />
+                                    <label class="radioInput" for="searchSmokeYes">
+                                        Yes
+                                    </label>
+                                    <input type="radio" class="radioInput" id="searchSmokeNo" name="searchRadio"/>
+                                    <label class="radioInput" for="searchSmokeNo">
+                                        <span></span>No
+                                    </label>
+                                    <input type="radio" class="radioInput" id="searchSmokeDontCare" name="searchRadio" checked="checked"/>
+                                    <label class="radioInput" for="searchSmokeDontCare">
+                                        <span></span>Dont care
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="searchTime" class="searchRideLocations">
+                            <p class="label">
+                                <span class="text searchText">time :</span>
+                                <input type="time" name="searchInput" id="searchTimeInput" class="inputText" />
+                            </p>
+                        </div>
+                        <div id="searchDate" class="searchRideLocations">
+                            <p class="label">
+                                <span class="text searchText">Date :</span>
+                                <input type="date" name="searchInput" id="searchDateInput" class="inputText" />
+                            </p>
+                        </div>
+
+                </div>
+            </div>
+
             <div id="postRequest" class="mainContent container">
 
                 <div class="publishPostRideHeader">

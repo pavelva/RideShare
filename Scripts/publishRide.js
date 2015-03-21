@@ -132,7 +132,7 @@ function addStopOver(){
         if (c < 5) {
             if(out.length < 37) {
                 inElement.val("");
-                $(elemArr[c]).text(out).show();
+                $(elemArr[c]).text(out.toLowerCase()).show();
                 $(btnArr[c]).show();
                 $(elemArrDetails[c]).show();
                 c++;

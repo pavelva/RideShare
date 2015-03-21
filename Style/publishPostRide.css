@@ -9,13 +9,13 @@
 }
 
 #publishContent{
-    height: 680px;
+    height: 690px;
     color: #3eaaf5;
     margin-top: 20px;
 }
 
 #postContent{
-    height: 480px;
+    height: 470px;
     color: #3eaaf5;
     margin-top: 20px;
 }
@@ -84,7 +84,8 @@
 }
 
 #postContent .label:nth-last-child(1){
-    margin-top: 1%;
+    margin-top: 2%;
+    /*background-color: #3188c4;*/
 }
 
 #publishContent  .label:nth-last-child(1){
@@ -235,8 +236,9 @@ input[type='radio'] + label {
 }
 
 .stopOverOut{
-    /*border: 1px solid red;*/
+    text-transform: capitalize;
     width: 95%;
+    /*display: block;*/
     top: 12%;
     position: absolute;
 
