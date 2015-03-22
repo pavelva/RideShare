@@ -10,13 +10,15 @@
 
 #publishContent{
     height: 690px;
-    color: #3eaaf5;
+    /*color: #3eaaf5;*/
+    color: white;
     margin-top: 20px;
 }
 
 #postContent{
     height: 470px;
-    color: #3eaaf5;
+    /*color: #3eaaf5;*/
+    color: white;
     margin-top: 20px;
 }
 
