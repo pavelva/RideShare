@@ -20,7 +20,7 @@ function updateScroll(){
 function initMyRidesPage(){
     initMyRidesFilters();
 
-    myRides = server.getMyRides(user.publicData.id);
+    var myRides = server.getMyRides(user.id);
     for (i in myRides) {
         updateMyRides(myRides[i]);
     }
@@ -142,7 +142,7 @@ function createRequest(requestObj){
 
                     saveBtn.unbind('click');
                     saveBtn.click(function () {
-                        server.rankRide(requestObj.id, ride.driverID, user.id, rank);
+                        //server.rankRide(requestObj.id, ride.driverID, user.id, rank);
 
                         $("#rankRideBtn" + requestObj.id).slideUp(300);
                         setTimeout(function(){

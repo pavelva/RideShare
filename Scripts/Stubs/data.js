@@ -9,15 +9,15 @@
         toTime: '23:00',
         riders: [
             {
-                name: users[1].publicData.name,
-                lastName: users[1].publicData.lastName,
-                id: users[1].publicData.id,
+                name: users[1].name,
+                lastName: users[1].lastName,
+                id: users[1].id,
                 ranked: false
             },
             {
-                name: users[3].publicData.name,
-                lastName: users[3].publicData.lastName,
-                id: users[3].publicData.id,
+                name: users[3].name,
+                lastName: users[3].lastName,
+                id: users[3].id,
                 ranked: false
             }],
         from: "Beer Sheva",
@@ -47,9 +47,9 @@
         toTime: '21:00',
         riders: [
             {
-                name: users[0].publicData.name,
-                lastName: users[0].publicData.lastName,
-                id: users[0].publicData.id
+                name: users[0].name,
+                lastName: users[0].lastName,
+                id: users[0].id
             }],
         from: "Beer Sheva",
         to: "Krayot",
@@ -65,21 +65,21 @@
         toTime: '21:00',
         riders: [
             {
-                name: users[0].publicData.name,
-                lastName: users[0].publicData.lastName,
-                id: users[0].publicData.id,
+                name: users[0].name,
+                lastName: users[0].lastName,
+                id: users[0].id,
                 ranked: true
             },
             {
-                name: users[8].publicData.name,
-                lastName: users[8].publicData.lastName,
-                id: users[8].publicData.id,
+                name: users[8].name,
+                lastName: users[8].lastName,
+                id: users[8].id,
                 ranked: false
             },
             {
-                name: users[6].publicData.name,
-                lastName: users[6].publicData.lastName,
-                id: users[6].publicData.id,
+                name: users[6].name,
+                lastName: users[6].lastName,
+                id: users[6].id,
                 ranked: false
             }],
         from: "Beer Sheva",
@@ -96,21 +96,21 @@
         toTime: '21:00',
         riders: [
             {
-                name: users[4].publicData.name,
-                lastName: users[4].publicData.lastName,
-                id: users[4].publicData.id,
+                name: users[4].name,
+                lastName: users[4].lastName,
+                id: users[4].id,
                 ranked: true
             },
             {
-                name: users[5].publicData.name,
-                lastName: users[5].publicData.lastName,
-                id: users[5].publicData.id,
+                name: users[5].name,
+                lastName: users[5].lastName,
+                id: users[5].id,
                 ranked: false
             },
             {
-                name: users[8].publicData.name,
-                lastName: users[8].publicData.lastName,
-                id: users[8].publicData.id,
+                name: users[8].name,
+                lastName: users[8].lastName,
+                id: users[8].id,
                 ranked: false
             }],
         from: "Beer Sheva",
@@ -191,15 +191,15 @@ var myRidesData = {
 //                toTime: '23:00',
 //                riders: [
 //                    {
-//                        name: users[1].publicData.name,
-//                        lastName: users[1].publicData.lastName,
-//                        id: users[1].publicData.id,
+//                        name: users[1].name,
+//                        lastName: users[1].lastName,
+//                        id: users[1].id,
 //                        ranked: false
 //                    },
 //                    {
-//                        name: users[3].publicData.name,
-//                        lastName: users[3].publicData.lastName,
-//                        id: users[3].publicData.id,
+//                        name: users[3].name,
+//                        lastName: users[3].lastName,
+//                        id: users[3].id,
 //                        ranked: false
 //                    }],
 //                from: "Beer Sheva",
@@ -217,9 +217,9 @@ var myRidesData = {
 //                toTime: '21:00',
 //                riders: [
 //                    {
-//                        name: users[0].publicData.name,
-//                        lastName: users[0].publicData.lastName,
-//                        id: users[0].publicData.id
+//                        name: users[0].name,
+//                        lastName: users[0].lastName,
+//                        id: users[0].id
 //                    }],
 //                from: "Beer Sheva",
 //                to: "Krayot",
@@ -236,21 +236,21 @@ var myRidesData = {
 //                toTime: '21:00',
 //                riders: [
 //                    {
-//                        name: users[0].publicData.name,
-//                        lastName: users[0].publicData.lastName,
-//                        id: users[0].publicData.id,
+//                        name: users[0].name,
+//                        lastName: users[0].lastName,
+//                        id: users[0].id,
 //                        ranked: true
 //                    },
 //                    {
-//                        name: users[8].publicData.name,
-//                        lastName: users[8].publicData.lastName,
-//                        id: users[8].publicData.id,
+//                        name: users[8].name,
+//                        lastName: users[8].lastName,
+//                        id: users[8].id,
 //                        ranked: false
 //                    },
 //                    {
-//                        name: users[6].publicData.name,
-//                        lastName: users[6].publicData.lastName,
-//                        id: users[6].publicData.id,
+//                        name: users[6].name,
+//                        lastName: users[6].lastName,
+//                        id: users[6].id,
 //                        ranked: false
 //                    }],
 //                from: "Beer Sheva",
@@ -282,21 +282,21 @@ var myRidesData = {
 //                toTime: '21:00',
 //                riders: [
 //                    {
-//                        name: users[4].publicData.name,
-//                        lastName: users[4].publicData.lastName,
-//                        id: users[4].publicData.id,
+//                        name: users[4].name,
+//                        lastName: users[4].lastName,
+//                        id: users[4].id,
 //                        ranked: true
 //                    },
 //                    {
-//                        name: users[5].publicData.name,
-//                        lastName: users[5].publicData.lastName,
-//                        id: users[5].publicData.id,
+//                        name: users[5].name,
+//                        lastName: users[5].lastName,
+//                        id: users[5].id,
 //                        ranked: false
 //                    },
 //                    {
-//                        name: users[8].publicData.name,
-//                        lastName: users[8].publicData.lastName,
-//                        id: users[8].publicData.id,
+//                        name: users[8].name,
+//                        lastName: users[8].lastName,
+//                        id: users[8].id,
 //                        ranked: false
 //                    }],
 //                from: "Beer Sheva",
@@ -321,21 +321,21 @@ var myRidesData = {
 //                toTime: '21:00',
 //                riders: [
 //                    {
-//                        name: users[0].publicData.name,
-//                        lastName: users[0].publicData.lastName,
-//                        id: users[0].publicData.id,
+//                        name: users[0].name,
+//                        lastName: users[0].lastName,
+//                        id: users[0].id,
 //                        ranked: true
 //                    },
 //                    {
-//                        name: users[8].publicData.name,
-//                        lastName: users[8].publicData.lastName,
-//                        id: users[8].publicData.id,
+//                        name: users[8].name,
+//                        lastName: users[8].lastName,
+//                        id: users[8].id,
 //                        ranked: false
 //                    },
 //                    {
-//                        name: users[6].publicData.name,
-//                        lastName: users[6].publicData.lastName,
-//                        id: users[6].publicData.id,
+//                        name: users[6].name,
+//                        lastName: users[6].lastName,
+//                        id: users[6].id,
 //                        ranked: false
 //                    }],
 //                from: "Beer Sheva",

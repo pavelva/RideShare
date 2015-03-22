@@ -1,12 +1,15 @@
-﻿$.getScript("Scripts/Stubs/users.js");
-$.getScript("Scripts/Stubs/data.js");
+﻿$(document).ready(function(){
+    $.getScript("Scripts/Stubs/users.js").done(function(){
+        $.getScript("Scripts/Stubs/data.js");
+    });
+});
 
 var server = {
     login: function(userID, password) {
         for (index in users) {
             var user = users[index];
-            if (userID == user.privateData.email && user.privateData.password) {
-                return user.publicData.id;
+            if (userID == user.email && user.password) {
+                return user.id;
             }
         }
 
@@ -17,18 +20,17 @@ var server = {
     },
     getMyRides: function(userID){
         var ansRides = myRidesData[userID];
-        if(ansRides == undefined)
+        if(ansRides == undefined) {
             alert('No Such MyRides Page For User ID :' + userID);
+            return [];
+        }
 
         return ansRides;
     },
 
-    rankRide: function(rideId, driverID, rankerId, rank){
-        for(userRide in myRides){
-            alert(myRides[userRide].id);
-            if (myRides[userRide].id == driverID){
-                alert(myRides[userRide].id);
-            }
+    rankRide: function(rideId, driverID, rankerId, rank, callback){
+        for(user in users){
+            return;
         }
     }
 }

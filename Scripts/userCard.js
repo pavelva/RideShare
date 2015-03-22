@@ -11,7 +11,8 @@ function updateUserCard(user){
 }
 
 function loadUserImage(user){
-    var image = user.publicData.image;
+    var image = user
+        .image;
     if(image == null) {
         image = serverUrl + '/Images/jhonDo.jpg';
     }
@@ -19,10 +20,12 @@ function loadUserImage(user){
     $("#userImg").css("background-image", 'url("' + image + '")');
 }
 function loadUserDetails(user){
-    $("#userName").append(user.publicData.name);
-    $("#userLastName").append(user.publicData.lastName);
-    $("#email .detail2").append(user.privateData.email);
-    $("#phone .detail2").append(user.privateData.phone);
+    $("#userName").append(user
+        .name);
+    $("#userLastName").append(user
+        .lastName);
+    $("#email .detail2").append(user.email);
+    $("#phone .detail2").append(user.phone);
 }
 
 function loadUserDriverRanking(user){
