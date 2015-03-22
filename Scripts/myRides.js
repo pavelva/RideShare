@@ -20,9 +20,9 @@ function updateScroll(){
 function initMyRidesPage(){
     initMyRidesFilters();
 
-    rides = server.getMyRides(user.publicData.id);
-    for (i in rides) {
-        updateMyRides(rides[i]);
+    myRides = server.getMyRides(user.publicData.id);
+    for (i in myRides) {
+        updateMyRides(myRides[i]);
     }
 
     filterStatus = function(obj){return true;};

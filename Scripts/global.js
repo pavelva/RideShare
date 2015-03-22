@@ -33,7 +33,7 @@ var pages = {
 var curPage = pages.myRides;
 var popup;
 var user;
-var rides;
+var myRides;
 var server;
 
 $(document).ready(function(){
@@ -101,7 +101,7 @@ function closeAll() {
 
 function logout() {
     user = '';
-    rides = '';
+    myRides = '';
     window.location = 'login.html';
 }
 
