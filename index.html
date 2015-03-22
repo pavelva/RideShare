@@ -127,11 +127,11 @@
                     <div id="searchInputCntent">
                         <div id="destTextDiv" class="searchRideLocations">
                             <p class="label">
-                                <span class="text searchText">Destanation :</span>
+                                <span class="text searchText">Destination :</span>
                                 <input type="text" name="searchInput" id="destinationSearchInput" class="inputText" placeholder="Heifa" />
                             </p>
                         </div>
-                        <div id="midlleText" class="searchRideLocations">
+                        <div id="reverseBtnDiv" class="searchRideLocations">
                             <input type="button" value="->|<-" class="btn filterStatusBtn" id="reverseDirection" onclick="reverseDirection()"/>
                         </div>
                         <div id="sourceTextDiv" class="searchRideLocations">
@@ -144,7 +144,7 @@
 
                     <div id="searchBtnDiv" class="searchRideLocations">
                         <p class="label">
-                            <input type="button" value="Search" class="btn" id="searchBtn" >
+                            <input type="button" value="Search" class="btn" id="searchBtn" on onclick="buildSearchResults()">
                         </p>
                     </div>
                         <div id="priceDiv" class="searchRideLocations">
@@ -187,7 +187,10 @@
                         </div>
 
                 </div>
+                <div class="container" id="searchResultsContentDiv"></div>
             </div>
+
+
 
             <div id="postRequest" class="mainContent container">
 
