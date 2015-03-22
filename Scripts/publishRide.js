@@ -132,7 +132,7 @@ function addStopOver(){
         if (c < 5) {
             if(out.length < 37) {
                 inElement.val("");
-                $(elemArr[c]).text(out).show();
+                $(elemArr[c]).text(out.toLowerCase()).show();
                 $(btnArr[c]).show();
                 $(elemArrDetails[c]).show();
                 c++;
@@ -164,15 +164,20 @@ function handleEnterKey(e){
     }
 }
 
-function clearAllFields() {
-    var arr = document.getElementsByName("input");
+function clearAllPublishFields() {
+    var arr = document.getElementsByName("publishInput");
+
     for(i=0 ; i<arr.length ; i++){
         arr[i].value = "";
     }
+
+    document.getElementById("sourceOut").innerText = "";
+    document.getElementById("destOut").innerText = "";
+
     while(c>0){
         removeElement(c);
     }
-    refreshDateAndTime();
+    refreshPublishDateAndTime();
 }
 
 window.addEventListener('load', function () {
@@ -190,7 +195,7 @@ window.addEventListener('load', function () {
         dd = '0' + dd;
     }
     today = yyyy+'-'+mm+'-'+dd;
-    document.getElementById("dateInput").value = today;
+    document.getElementById("publishDateInput").value = today;
 
     if(hour < 10){
         hour = '0' + hour;
@@ -200,11 +205,11 @@ window.addEventListener('load', function () {
     }
 
     today = hour+':'+minutes;
-    document.getElementById("fromTimeInput").value = today;
-    document.getElementById("toTimeInput").value = today;
+    document.getElementById("publishFromTimeInput").value = today;
+    document.getElementById("publishToTimeInput").value = today;
 });
 
-function refreshDateAndTime() {
+function refreshPublishDateAndTime() {
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth() + 1;
@@ -219,7 +224,7 @@ function refreshDateAndTime() {
         dd = '0' + dd;
     }
     today = yyyy + '-' + mm + '-' + dd;
-    document.getElementById("dateInput").value = today;
+    document.getElementById("publishDateInput").value = today;
 
     if (hour < 10) {
         hour = '0' + hour;
@@ -229,9 +234,10 @@ function refreshDateAndTime() {
     }
 
     today = hour + ':' + minutes;
-    document.getElementById("fromTimeInput").value = today;
-    document.getElementById("toTimeInput").value = today;
+    document.getElementById("publishFromTimeInput").value = today;
+    document.getElementById("publishToTimeInput").value = today;
 }
+
 function sourceHandleKey(e){
     if(e.keyCode != 13){
         var inElement = $("#inputSource");

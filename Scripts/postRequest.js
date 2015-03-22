@@ -1,4 +1,3 @@
-/**
 
 //function addPostDetails(){
 //    return "" +
@@ -69,3 +68,72 @@
 //    '</p>'+
 //    '</div>'
 //}
+
+
+function clearAllPostFields() {
+    var arr = document.getElementsByName("postInput");
+
+    for(i=0 ; i<arr.length ; i++){
+        arr[i].value = "";
+    }
+
+    refreshPostDateAndTime();
+}
+
+ window.addEventListener('load', function () {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+    var hour = today.getHours();
+    var minutes = today.getMinutes();
+    yyyy = parseInt(yyyy);
+    if(mm < 10){
+        mm = '0' + mm;
+    }
+    if(dd < 10){
+        dd = '0' + dd;
+    }
+    today = yyyy+'-'+mm+'-'+dd;
+    document.getElementById("postDateInput").value = today;
+
+    if(hour < 10){
+        hour = '0' + hour;
+    }
+    if(minutes < 10){
+        minutes = '0' + minutes;
+    }
+
+    today = hour+':'+minutes;
+    document.getElementById("postFromTimeInput").value = today;
+    document.getElementById("postToTimeInput").value = today;
+});
+
+function refreshPostDateAndTime() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    var hour = today.getHours();
+    var minutes = today.getMinutes();
+    yyyy = parseInt(yyyy);
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("postDateInput").value = today;
+
+    if (hour < 10) {
+        hour = '0' + hour;
+    }
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    }
+
+    today = hour + ':' + minutes;
+    document.getElementById("postFromTimeInput").value = today;
+    document.getElementById("postToTimeInput").value = today;
+}

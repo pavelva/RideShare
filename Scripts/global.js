@@ -19,7 +19,7 @@ var pages = {
     },
     searchRides: {
         navigatorID: 'aSearchRide',
-        containerID: 'searchRides',
+        containerID: 'searchRide',
         loadFunction: function(){}
     },
     postRequest: {
