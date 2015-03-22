@@ -8,6 +8,7 @@ var myRidesObjects = [];
 var myRidesScrollerApi;
 
 var timeInterval = 400;
+
 function updateScroll(){
     setTimeout(function(){
         myRidesScrollerApi.reinitialise();
@@ -19,16 +20,16 @@ function updateScroll(){
 function initMyRidesPage(){
     initMyRidesFilters();
 
-    rides = getMyRides(user.publicData.id);
-    for (i in rides)
+    rides = server.getMyRides(user.publicData.id);
+    for (i in rides) {
         updateMyRides(rides[i]);
+    }
 
     filterStatus = function(obj){return true;};
     filterType = function(obj){return true;};
 }
 
 function updateMyRides(ride) {
-    $('#myRides').resize(function(){alert(1);});
     if (ride.type == 'Ride') {
         createRide(ride);
     }
@@ -37,11 +38,12 @@ function updateMyRides(ride) {
     }
 }
 
-function createRide(ride){
+function createRide(rideObj){
+    var ride = rideObj.rideDetails;
     var rd = "" +
         '<div class="myRide container" id="rd' + ride.id + '">' +
             '<div class="header">' +
-                '<span class="type">' + ride.type +'</span>' +
+                '<span class="type">' + rideObj.type +'</span>' +
                 '<span class="route">' + ride.from + ' - ' + ride.to + '</span>' +
                 '<span class="status">' + ride.status + '</span>' +
             '</div>' +
@@ -75,11 +77,12 @@ function createRide(ride){
     myRidesObjects.push({object: curObject, type: 'ride', status: ride.status});
 }
 
-function createRequest(ride){
+function createRequest(requestObj){
+    var ride = requestObj.rideDetails;
     var rq =   "" +
-        '<div class="myRide container" id="rq' + ride.id+ '">' +
+        '<div class="myRide container" id="rq' + requestObj.id+ '">' +
             '<div class="header">' +
-                '<span class="type">' + ride.type + '</span>' +
+                '<span class="type">' + requestObj.type + '</span>' +
                 '<span class="route">' + ride.from + ' - ' + ride.to + '</span>' +
                 '<span class="status">' + ride.status + '</span>' +
             '</div>' +
@@ -92,14 +95,14 @@ function createRequest(ride){
                 createRidesLeftSide(ride) +
             '</div>' +
             '<div class="controls">' +
-                (ride.status != 'Done' ? '<input id="updateRequestBtn' + ride.id + '" type="button" class="btn control a" value="Update Request"/>' : '') +
-                (ride.status == 'Done' && !ride.ranked ? '<input id="rankRideBtn' + ride.id + '" type="button" class="btn control a" value="Rank Ride"/>' : '') +
+                (requestObj.status != 'Done' ? '<input id="updateRequestBtn' + requestObj.id + '" type="button" class="btn control a" value="Update Request"/>' : '') +
+                (requestObj.status == 'Done' && !requestObj.ranked ? '<input id="rankRideBtn' + requestObj.id + '" type="button" class="btn control a" value="Rank Ride"/>' : '') +
             '</div>' +
         '</div>';
     $("#myRides").append(rq);
 
     if(ride.status == 'Done'){
-        $('#rankRideBtn' + ride.id).click(function(){
+        $('#rankRideBtn' + requestObj.id).click(function(){
             var content = '<div class="rankRide">' +
                 '<h2 class="header">Rank Ride</h2>' +
                 '<div class="details">' +
@@ -121,14 +124,41 @@ function createRequest(ride){
             loadPopup(content);
 
             var saveBtn = $("#popup .rankRide input:nth-of-type(1)");
-            saveBtn.click(function(){
+            var stars = [$("#rank1"), $("#rank2"), $("#rank3"), $("#rank4"), $("#rank5")];
 
-            });
+            for(var i = 1; i<=5; i++){
+                updateRank(i);
+            }
+
+            function updateRank(rank) {
+                stars[rank-1].click(function(){
+                    for(var j=0 ; j<=rank-1; j++){
+                        stars[j].css("background-image","url(" + serverUrl + "Images/fullStar.png)");
+                    }
+
+                    for(var j=rank ; j<5; j++){
+                        stars[j].css("background-image","url(" + serverUrl + "Images/star.png)");
+                    }
+
+                    saveBtn.unbind('click');
+                    saveBtn.click(function () {
+                        server.rankRide(requestObj.id, ride.driverID, user.id, rank);
+
+                        $("#rankRideBtn" + requestObj.id).slideUp(300);
+                        setTimeout(function(){
+                            updateScroll();
+                            closePopup();
+                        }, 300)
+                    });
+                });
+
+
+            }
         });
     }
 
-    var curObject = $('#rq' + ride.id);
-    myRidesObjects.push({object: curObject, type: 'request', status: ride.status});
+    var curObject = $('#rq' + requestObj.id);
+    myRidesObjects.push({object: curObject, type: 'request', status: requestObj.status});
 }
 
 function createRidesLeftSide(ride) {

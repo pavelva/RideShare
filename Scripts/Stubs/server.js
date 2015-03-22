@@ -1,26 +1,8 @@
-﻿//var server = {
-//    login: function (userName, password) {
-//        $.getScript("Scripts/Stubs/users.js", function () {
-//            alert(users[0].id);
-//            return 1111;
-//        });
-//    }
-//};
-
-//var server = {
-//    login: function (user, password) {
-//        return $.getScript("Scripts/Stubs/users.js").done(function () {
-//            alert('userID: ' + users[0].publicData.id);
-//            return users[0].publicData.id;
-//        }).fail(function(){alert('fail');});
-//    }
-//}
-
-$.getScript("Scripts/Stubs/users.js");
+﻿$.getScript("Scripts/Stubs/users.js");
 $.getScript("Scripts/Stubs/data.js");
 
 var server = {
-    login: function (userID, password) {
+    login: function(userID, password) {
         for (index in users) {
             var user = users[index];
             if (userID == user.privateData.email && user.privateData.password) {
@@ -29,5 +11,24 @@ var server = {
         }
 
         return 0;
+    },
+    getUser: function(id){
+        return users[id];
+    },
+    getMyRides: function(userID){
+        var ansRides = myRidesData[userID];
+        if(ansRides == undefined)
+            alert('No Such MyRides Page For User ID :' + userID);
+
+        return ansRides;
+    },
+
+    rankRide: function(rideId, driverID, rankerId, rank){
+        for(userRide in myRides){
+            alert(myRides[userRide].id);
+            if (myRides[userRide].id == driverID){
+                alert(myRides[userRide].id);
+            }
+        }
     }
 }
