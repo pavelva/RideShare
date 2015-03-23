@@ -1,4 +1,5 @@
-﻿$(document).ready(function(){
+﻿
+$(document).ready(function(){
     $.getScript("Scripts/Stubs/users.js").done(function(){
         $.getScript("Scripts/Stubs/data.js");
     });
@@ -9,8 +10,10 @@ var server = {
         for (index in users) {
             var user = users[index];
             if (userID == user.email && user.password) {
-                return user.id;
+                return index;
             }
+
+            return null;
         }
 
         return 0;

@@ -37,7 +37,16 @@ var user;
 var myRides;
 var server;
 
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+
+}
 $(document).ready(function(){
+    var userID = getParameterByName('id');
+
     $('nav .links').hide();
     //$('#userCard').hide();
     //$('#notifications *').hide();
@@ -51,7 +60,7 @@ $(document).ready(function(){
             setTimeout(function(){$('body').dequeue('load');},500);
 
         }).queue('load',function() {
-            init();
+            init(userID);
 
             $('#userCard').hide();
             $('#notifications *').hide();
@@ -80,11 +89,11 @@ $(window).resize(function(){
 });
 
 
-function init() {
+function init(userID) {
     popup = $('#popup');
     popup.click(closePopup);
 
-    user = server.getUser(0);
+    user = server.getUser(userID);
     updateUserCard(user);
 
     initMyRidesPage();

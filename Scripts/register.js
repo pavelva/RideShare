@@ -2,6 +2,16 @@
  * Created by Alex on 3/11/2015.
  */
 
+var serverUrl = "http://localhost:63342/RideShare/";
+
+$(document).ready(function(){
+    $("#loginBtn").click(function(){
+        var id = server.login($("#loginEmail").val(), $("#loginPass").val());
+
+        if(id != null)
+            window.location.href = serverUrl + "?id=" + id;
+    });
+});
 function userRegister(){
     alert("here");
     var pass = document.getElementById("regPass").value;
