@@ -10,6 +10,7 @@ var pages = {
                 }
             );
             myRidesScrollerApi = $('main').data('jsp');
+            notificationsScrollerApi = $("#notifications").data('jsp');
         }
     },
     publishRide: {
@@ -38,8 +39,8 @@ var server;
 
 $(document).ready(function(){
     $('nav .links').hide();
-    $('#userCard').hide();
-    $('#notifications *').hide();
+    //$('#userCard').hide();
+    //$('#notifications *').hide();
     $('.updatesIcon').hide();
     closeAll();
     //init();
@@ -51,10 +52,14 @@ $(document).ready(function(){
 
         }).queue('load',function() {
             init();
+
+            $('#userCard').hide();
+            $('#notifications *').hide();
+
             $(this).dequeue('load');
         }).queue('load',function(){
             $("#leftAside").animate({width:"23%"},600,function(){
-                $("#leftAside").css({minWidth:"310px"});
+                //$("#leftAside").css({minWidth:"310px"});
                 $('#userCard').fadeIn(200);
             });
             $("#rightAside").animate({width:"23%"},600,function(){
@@ -70,11 +75,8 @@ $(document).ready(function(){
 });
 
 $(window).resize(function(){
-    $('#notifications').jScrollPane({
-            verticalGutter: 0,
-            horizontalGutter: 0
-        }
-    );
+    notificationsScrollerApi.reinitialise();
+    myRidesScrollerApi.reinitialise();
 });
 
 
@@ -86,6 +88,7 @@ function init() {
     updateUserCard(user);
 
     initMyRidesPage();
+    loadNotifications(user);
 
     updateCurrentPage(pages.myRides);
 

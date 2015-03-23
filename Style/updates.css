@@ -46,7 +46,6 @@
 
 #notifications .header {
     width:100%;
-    /*background-color: rgba(0,0,0,0.5);*/
     color:#3eaaf5;
     font-size: 1.2em;
     border-bottom: 1px solid rgba(255,255,255,0.4);
@@ -56,25 +55,28 @@
     display: inline-block;
     vertical-align: top;
     width:100%;
-    padding:10px 0 5px 0;
+    padding:20px 0 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.5);
     position:relative;
 }
 
+#notifications .notification:nth-of-type(even){
+    background-color: rgba(255,255,255,0.1);
+}
 #notifications .notification:hover > .deleteNotification{
     display:block !important;
 }
 
 #notifications .notification:hover{
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.2);
     cursor: default;
 }
 
 #notifications .notification .deleteNotification{
     background: rgba(250,0,0,0.8);
-    box-shadow: inset 1px 1px rgba(255,255,255,0.3), 1px 1px rgba(255,255,255,0.2);
+    /*box-shadow: inset 1px 1px rgba(255,255,255,0.3), 1px 1px rgba(255,255,255,0.2);*/
+    box-shadow: inset 1px 1px rgba(255,255,255,0.3), 1px 1px rgba(255,255,255,0.1);
     color:black;
-    /*display: block;*/
     position:absolute;
     font-weight: bold;
     right:3px;
@@ -85,7 +87,8 @@
 }
 
 #notifications .notification .deleteNotification:hover{
-    background: rgba(150,0,0,1);
+    /*background: rgba(150,0,0,1);*/
+    background: rgba(190,0,0,1);
     cursor: pointer;
 }
 #notifications .notification .deleteNotification:active{
@@ -94,9 +97,8 @@
 .notification .title{
     display: block;
     width:100%;
-    /*padding: 0 0 0 1%;*/
-    margin: 0 0 0 1%;
-    font-size: 1em;
+    margin: 0 0 1% 1%;
+    font-size: 0.9em;
     color:white;
 }
 
@@ -105,7 +107,7 @@
     width:98%;
     padding: 0 0 0 2%;
     margin:0 0 10px 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #ced0cc;
 }
 

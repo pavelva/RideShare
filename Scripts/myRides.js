@@ -51,7 +51,7 @@ function createRide(rideObj){
                 '<div class="right">' +
                 '<span class="head">Riders:</span>' +
                 (ride.riders.length == 0 ? ' <p class="rider">No Riders</p>' :
-                    createRidersList(ride)) +
+                    createRidersList(ride, 'Ride')) +
                 '</div>' +
                 '<div class="middle">' +
                     '<span class="head">Stops:</span>' +
@@ -90,7 +90,7 @@ function createRequest(requestObj){
                 '<div class="right">' +
                     '<span class="head">Riders:</span>' +
                     (ride.riders.length == 0 ? ' <p class="rider">No Riders</p>' :
-                        createRidersList(ride)) +
+                        createRidersList(ride, 'Request')) +
                 '</div>' +
                 createRidesLeftSide(ride) +
             '</div>' +
@@ -142,13 +142,15 @@ function createRequest(requestObj){
 
                     saveBtn.unbind('click');
                     saveBtn.click(function () {
-                        //server.rankRide(requestObj.id, ride.driverID, user.id, rank);
+                        server.rankRide(requestObj.id, ride.driverID, user.id, rank, function(){
+                            $("#rankRideBtn" + requestObj.id).slideUp(300);
+                            setTimeout(function(){
+                                updateScroll();
+                                closePopup();
+                            }, 300);
+                        }, function(){
 
-                        $("#rankRideBtn" + requestObj.id).slideUp(300);
-                        setTimeout(function(){
-                            updateScroll();
-                            closePopup();
-                        }, 300)
+                        });
                     });
                 });
 
@@ -180,12 +182,12 @@ function createRidesLeftSide(ride) {
             '</div>'
 }
 
-function createRidersList(ride) {
+function createRidersList(ride, type) {
     var ans = ""
 
     for (i in ride.riders) {
         ans += '<p class="line">' +
-        (ride.type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="btn riderRank a" value="Rank"/>' : '') +
+        (type == 'Ride' && ride.status == 'Done' && ride.riders[i].ranked == false? '<input type="button" class="btn riderRank a" value="Rank"/>' : '') +
         '<span style="display:block;border:1px solid rgba(255,255,255,0);">' +
         ride.riders[i].name + ' ' + ride.riders[i].lastName +
         '</span>' +

@@ -2,6 +2,8 @@
  * Created by Pavel on 06/03/2015.
  */
 
+var notificationsScrollerApi;
+
 function updateUserCard(user){
     loadUserImage(user);
     loadUserDetails(user);
@@ -50,4 +52,28 @@ function loadRanks(rank, type) {
 
         rating--;
     }
+}
+
+function loadNotifications(user){
+    var notificationContainer = $("#notifications");
+    var notifications = user.notifications;
+    for (i in notifications){
+        var not = '<div class="notification" id="notification' + i + '">' +
+                '<span class="title">' + notifications[i].title + '</span>' +
+                '<span class="body">' + notifications[i].body + '</span>' +
+                '<input type="button" value="X" class="deleteNotification" onclick="deleteNotification(' + user.id + ','+ i + ')">' +
+                '</div>';
+
+        notificationContainer.append(not);
+    }
+}
+
+function deleteNotification(userID, notID){
+    server.deleteNotification(userID, notID,function(){
+        $("#notification" + notID).hide();
+        notificationsScrollerApi.reinitialise();
+    }, function(){
+        alert('error deleting notification');
+    })
+
 }

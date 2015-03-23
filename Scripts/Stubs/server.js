@@ -28,9 +28,10 @@ var server = {
         return ansRides;
     },
 
-    rankRide: function(rideId, driverID, rankerId, rank, callback){
-        for(user in users){
-            return;
-        }
+    rankRide: function(rideId, driverID, rankerId, rank, sucFunc, failFunc){
+        sucFunc();
+    },
+    deleteNotification: function(userID, notificationID, sucFunc, failFunc){
+        sucFunc();
     }
 }

@@ -10,7 +10,33 @@
         ranking: {
             driver: {rating: 4.5, rides: 11, ranks: 12},
             rider: {rating: 3, rides: 7, ranks: 7}
-        }
+        },
+        notifications :[
+            {
+                title: 'Ride Approval',
+                body: 'Your request for a ride on 11/01/2015 from Beer Sheva to Metula has been approved'
+            },
+            {
+                title: 'A Ride You Are Registered To Has Been Updated',
+                body: 'A Ride on 11/01/2015 from Beer Sheva to Metula has been updated'
+            },
+            {
+                title: 'Ride Approval',
+                body: 'Your request for a ride on 10/11/2015 from Beer Sheva to Kiryat Shmona has been approved'
+            },
+            {
+                title: 'Ride Request',
+                body: 'Benyamin Netanyahu has sent you a request for a ride on 10/12/2015 from Beer Sheva to Haifa'
+            },
+            {
+                title: 'A Ride You Are Registered To Has Been Updated',
+                body: 'A Ride on 10/11/2015 from Beer Sheva to Kiryat Shmona has been updated'
+            },
+            {
+                title: 'Ride Request',
+                body: 'Dany Danon has sent you a request for a ride on 10/12/2015 from Beer Sheva to Haifa'
+            }
+        ]
     },
     {
         name: 'Dani',
@@ -23,7 +49,8 @@
         ranking: {
             driver: {rating: 1.5, rides: 5, ranks: 8},
             rider: {rating: 0.5, rides: 2, ranks: 2}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Arnold',
@@ -36,7 +63,8 @@
         ranking: {
             driver: {rating: 4.5, rides: 22, ranks: 62},
             rider: {rating: 5, rides: 37, ranks: 24}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Benyamin',
@@ -49,7 +77,8 @@
         ranking: {
             driver: {rating: 2.5, rides: 11, ranks: 12},
             rider: {rating: 3, rides: 7, ranks: 7}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Christiano',
@@ -62,7 +91,8 @@
         ranking: {
             driver: {rating: 5, rides: 1, ranks: 2},
             rider: {rating: 2, rides: 12, ranks: 1}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Leonel',
@@ -75,7 +105,8 @@
         ranking: {
             driver: {rating: 4.5, rides: 127, ranks: 413},
             rider: {rating: 5, rides: 121, ranks: 75}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Dana',
@@ -88,7 +119,8 @@
         ranking: {
             driver: {rating: 0, rides: 0, ranks: 0},
             rider: {rating: 3, rides: 70, ranks: 18}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Sara',
@@ -101,7 +133,8 @@
         ranking: {
             driver: {rating: 4.5, rides: 11, ranks: 18},
             rider: {rating: 0, rides: 0, ranks: 0}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Sarit',
@@ -114,7 +147,8 @@
         ranking: {
             driver: {rating: 1, rides: 2, ranks: 6},
             rider: {rating: 3, rides: 12, ranks: 12}
-        }
+        },
+        notifications :[]
     },
     {
         name: 'Orit',
@@ -127,6 +161,7 @@
         ranking: {
             driver: {rating: 4.5, rides: 11, ranks: 3},
             rider: {rating: 5, rides: 7, ranks: 1}
-        }
+        },
+        notifications :[]
     }
 ];
