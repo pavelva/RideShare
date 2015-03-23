@@ -12,23 +12,28 @@ function reverseDirection(){
 
 function buildSearchResults() {
     var searchRes = $("#searchResultsContentDiv");
-    searchRes.slideUp();
-    searchRes.empty();
-    var rowInTable = "" +
-        '<div class="container">' +
+    $.when(searchRes.slideUp()).then(function(){
+        searchRes.empty();
+    }).then(function(){
+        var rowInTable = "" +
+            '<div class="container">' +
             '<table class="searchTable">' +
-                '<tr id="tableHeaders">' +
-                '<td class="headerCell" style="width: 20%">Driver</td>' +
-                '<td class="headerCell" style="width: 20%">Source</td>' +
-                '<td class="headerCell" style="width: 20%">Destination</td>' +
-                '<td class="headerCell" style="width: 15%">Date</td>' +
-                '<td class="headerCell" style="width: 15%">Time</td>' +
-                '<td class="headerCell" style="width: 10%">price</td>' +
-                '</tr>' +
-                findRelevantRides()+
+            '<tr id="tableHeaders">' +
+            '<td class="headerCell" style="width: 20%">Driver</td>' +
+            '<td class="headerCell" style="width: 20%">Source</td>' +
+            '<td class="headerCell" style="width: 20%">Destination</td>' +
+            '<td class="headerCell" style="width: 15%">Date</td>' +
+            '<td class="headerCell" style="width: 15%">Time</td>' +
+            '<td class="headerCell" style="width: 10%">price</td>' +
+            '</tr>' +
+            findRelevantRides()+
             '</table>' +
-        '</div>';
-    searchRes.append(rowInTable).slideDown();
+            '</div>';
+        searchRes.append(rowInTable).slideDown();
+    });
+
+
+
 }
 function findRelevantRides(){
 
@@ -36,7 +41,7 @@ function findRelevantRides(){
     for(i=0;i<4;i++) {
         for (ride in rides) {
             if (rides[ride].status == 'Open') {
-                //if (rides[ride].from == $('#sourceSearchInput').val()){
+                if (rides[ride].from == $('#sourceSearchInput').val()){
                     ans += '<tr class="tableRowDetails">' +
                     '<td class="regularCell">' + rides[ride].driver + '</td>' +
                     '<td class="regularCell">' + rides[ride].from + '</td>' +
@@ -45,7 +50,7 @@ function findRelevantRides(){
                     '<td class="regularCell">' + rides[ride].fromTime + '-' + rides[ride].toTime + '</td>' +
                     '<td class="regularCell">35</td>' +
                     '</tr>';
-                //}
+                }
             }
         }
     }

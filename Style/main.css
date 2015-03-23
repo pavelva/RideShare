@@ -82,7 +82,9 @@ body{
     background-size: cover;
     background-position: 40% 50%;
 }
+img.grayscale{
 
+}
 header{
     width:100%;
     height:70px;
