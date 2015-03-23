@@ -43,7 +43,6 @@ function updateMyRides(ride) {
 
 function createRide(rideObj, appendFunc){
     var ride = rideObj.rideDetails;
-    alert(1);
     var rd = "" +
         '<div class="myRide container" id="rd' + ride.id + '">' +
             '<div class="header">' +
@@ -68,9 +67,7 @@ function createRide(rideObj, appendFunc){
                 (ride.status != 'Done'?'<input id="updateRideBtn' + ride.id+ '" type="button" class="btn control a" value="Update Ride"/>':'') +
             '</div>' +
         '</div>';
-    alert(2);
     appendFunc(rd);
-    alert(3);
     if(ride.status != 'Done'){
         $('#updateRideBtn' + ride.id).click(function(){
             var content = '<div>' + ride.from + '</div>';
@@ -218,9 +215,7 @@ function createStopList(ride){
 
 function addRide(rideObj){
     createRide(rideObj, function(rideHtml){
-        alert('start append');
         $(rideHtml).insertAfter("#myRides .pageHeader");
-        alert('finish append');
     });
 }
 // ---------FILTERS-----------
