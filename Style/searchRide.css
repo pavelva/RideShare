@@ -144,6 +144,15 @@
 .tableRowDetails:nth-child(odd){
     background-color: rgba(82,140,255 ,0.4);
 }
+/*.tableRowDetails:nth-child(even):hover{*/
+    /*background-color: rgba(102,180,255 ,0.7);*/
+/*}*/
+.tableRowDetails:hover{
+    /*background-color: rgba(82,140,255 ,0.7);*/
+    background: rgba(200,200,200,0.5);
+    /*background: rgba(255,255,255,0.6);*/
+    /*background-color: rgba(237,192,56,0.7);*/
+}
 .regularCell{
     border: 1px solid white;
 }

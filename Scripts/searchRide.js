@@ -33,17 +33,40 @@ function buildSearchResults() {
 function findRelevantRides(){
 
     var ans = "";
+    for(i=0;i<4;i++) {
         for (ride in rides) {
             if (rides[ride].status == 'Open') {
-                ans +=  '<tr class="tableRowDetails">'+
-                            '<td class="regularCell">'+rides[ride].driver+'</td>'+
-                            '<td class="regularCell">'+rides[ride].from+'</td>'+
-                            '<td class="regularCell">'+rides[ride].to+'</td>'+
-                            '<td class="regularCell">'+rides[ride].date+'</td>'+
-                            '<td class="regularCell">'+rides[ride].fromTime+'-'+rides[ride].toTime+'</td>'+
-                            '<td class="regularCell">35</td>'+
-                        '</tr>';
+                //if (rides[ride].from == $('#sourceSearchInput').val()){
+                    ans += '<tr class="tableRowDetails">' +
+                    '<td class="regularCell">' + rides[ride].driver + '</td>' +
+                    '<td class="regularCell">' + rides[ride].from + '</td>' +
+                    '<td class="regularCell">' + rides[ride].to + '</td>' +
+                    '<td class="regularCell">' + rides[ride].date + '</td>' +
+                    '<td class="regularCell">' + rides[ride].fromTime + '-' + rides[ride].toTime + '</td>' +
+                    '<td class="regularCell">35</td>' +
+                    '</tr>';
+                //}
             }
         }
+    }
     return ans;
 }
+
+//function sendToServerSearchParam(name, email, phone, pass){
+//    $.ajax({
+//        type: "POST",
+//        url: "http://rideshare-server.herokuapp.com/user",
+//        data: {
+//            fullName: name,
+//            email: email,
+//            phone: phone,
+//            password: pass
+//        },
+//        //contentType: "application/json; charset=utf-8",
+//        dataType: "json",
+//        success: function(data){alert("SUCC ______" + JSON.stringify(data));},
+//        error: function(errMsg) {
+//            alert("ERROR ______" + JSON.stringify(errMsg));
+//        }
+//    });
+//}
