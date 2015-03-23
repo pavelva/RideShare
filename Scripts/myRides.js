@@ -33,9 +33,7 @@ function initMyRidesPage(){
 function updateMyRides(ride) {
     if (ride.type == 'Ride') {
         createRide(ride, function(rideHtml){
-            alert('start append');
             $("#myRides").append(rideHtml);
-            alert('finish append');
         });
     }
     else {
@@ -219,7 +217,9 @@ function createStopList(ride){
 
 function addRide(rideObj){
     createRide(rideObj, function(rideHtml){
+        alert('start append');
         $(rideHtml).insertAfter("#myRides .pageHeader");
+        alert('finish append');
     });
 }
 // ---------FILTERS-----------
