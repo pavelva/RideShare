@@ -27,18 +27,21 @@ function initMyRidesPage(){
 
     filterStatus = function(obj){return true;};
     filterType = function(obj){return true;};
+
 }
 
 function updateMyRides(ride) {
     if (ride.type == 'Ride') {
-        createRide(ride);
+        createRide(ride, function(rideHtml){
+            $("#myRides").append(rideHtml);
+        });
     }
     else {
         createRequest(ride);
     }
 }
 
-function createRide(rideObj){
+function createRide(rideObj, appendFunc){
     var ride = rideObj.rideDetails;
     var rd = "" +
         '<div class="myRide container" id="rd' + ride.id + '">' +
@@ -64,7 +67,8 @@ function createRide(rideObj){
                 (ride.status != 'Done'?'<input id="updateRideBtn' + ride.id+ '" type="button" class="btn control a" value="Update Ride"/>':'') +
             '</div>' +
         '</div>';
-    $("#myRides").append(rd);
+
+    appendFunc(rd);
 
     if(ride.status != 'Done'){
         $('#updateRideBtn' + ride.id).click(function(){
@@ -75,6 +79,8 @@ function createRide(rideObj){
 
     var curObject = $('#rd' + ride.id);
     myRidesObjects.push({object: curObject, type: 'ride', status: ride.status});
+
+    return rd;
 }
 
 function createRequest(requestObj){
@@ -209,6 +215,11 @@ function createStopList(ride){
     return ans;
 }
 
+function addRide(rideObj){
+    createRide(rideObj, function(rideHtml){
+        $(rideHtml).insertAfter("#myRides .pageHeader");
+    });
+}
 // ---------FILTERS-----------
 function initMyRidesFilters(){
     $("#btnMyRidesAll").css('color', 'white');
