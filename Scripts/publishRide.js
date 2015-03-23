@@ -125,6 +125,7 @@ var elemArrDetails = ["#stopOverLabelFirst","#stopOverLabelSecond","#stopOverLab
                         ,"#stopOverLabelFourth","#stopOverLabelFifth"];
 var btnArr = ["#firstButton","#secondButton","#thirdButton","#fourthButton","#fifthButton"];
 
+var stopOver = [];
 function addStopOver(){
     var inElement = $("#inputStopOver");
     var out = inElement.val();
@@ -135,6 +136,7 @@ function addStopOver(){
                 $(elemArr[c]).text(out.toLowerCase()).show();
                 $(btnArr[c]).show();
                 $(elemArrDetails[c]).show();
+                stopOver[c] = out;
                 c++;
             }
             else{
@@ -151,7 +153,9 @@ function addStopOver(){
 function removeElement(num){
     for (i=num; i<elemArr.length-1; i++){
         $(elemArr[i]).text($(elemArr[i+1]).text());
+
     }
+    stopOver.splice(num,1);
     $(elemArr[c-1]).append("").hide();
     $(elemArrDetails[c-1]).hide();
     $(btnArr[c-1]).hide();
@@ -170,6 +174,8 @@ function clearAllPublishFields() {
     for(i=0 ; i<arr.length ; i++){
         arr[i].value = "";
     }
+
+    stopOver.splice(0,stopOver.length);
 
     document.getElementById("sourceOut").innerText = "";
     document.getElementById("destOut").innerText = "";
@@ -262,4 +268,19 @@ function destHandleKey(e){
             alert("too long")
         }
     }
+}
+
+function publishRide(){
+    var newDateFormat = (publishDateInput).value.substring(8,10) + '/' + (publishDateInput).value.substring(5,7) + '/'+(publishDateInput).value.substring(0,4);
+    var publishRes = server.publish($("#inputSource").val(), $("#inputDest").val(), stopOver,newDateFormat,
+        $("#publishFromTimeInput").val(),$("#publishToTimeInput").val(),$("#maxPasInput").val(),$("#priceInput").val());
+    if(publishRes != null) {
+        addRide({
+            type: 'Ride',
+            rideDetails: publishRes
+        });
+        clearAllPublishFields();
+        updateCurrentPage(pages.myRides);
+    }
+
 }

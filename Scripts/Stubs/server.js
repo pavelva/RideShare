@@ -18,6 +18,22 @@ var server = {
 
         return 0;
     },
+    publish: function(source, destination, arrStopOver, date, fromTime, toTime, numPassengers, price) {
+        rides[rides.length] = {
+            status: 'Open',
+            id: ''+rides.length+''+rides.length+''+rides.length+''+rides.length,
+            driver: user.name+' '+user.lastName,
+            driverID: user.id,
+            date: date,
+            fromTime: fromTime,
+            toTime: toTime,
+            riders: [],
+            from: source,
+            to: destination,
+            stops: arrStopOver
+        };
+        return rides[rides.length-1]
+    },
     getUser: function(id){
         return users[id];
     },

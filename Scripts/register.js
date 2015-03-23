@@ -21,14 +21,14 @@ function userRegister(){
         name += " " + document.getElementById("regLName").value;
         var email = document.getElementById("regEmail").value;
         var phone = document.getElementById("regPhone").value;
-        sendToServer(name, email, phone, pass)
+        sendToServerRegistration(name, email, phone, pass)
     }
     else{
         alert("password and verify password not match");
     }
 }
 
-function sendToServer(name, email, phone, pass){
+function sendToServerRegistration(name, email, phone, pass){
     $.ajax({
         type: "POST",
         url: "http://rideshare-server.herokuapp.com/user",

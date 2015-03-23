@@ -126,7 +126,7 @@
                         <div id="destTextDiv" class="searchRideLocations">
                             <p class="label">
                                 <span class="text searchText">Destination :</span>
-                                <input type="text" name="searchInput" id="destinationSearchInput" class="inputText" placeholder="Heifa" />
+                                <input type="text" name="searchInput" id="destinationSearchInput" class="inputText" placeholder="Haifa" />
                             </p>
                         </div>
                         <div id="reverseBtnDiv" class="searchRideLocations">
@@ -142,13 +142,13 @@
 
                     <div id="searchBtnDiv" class="searchRideLocations">
                         <p class="label">
-                            <input type="button" value="Search" class="btn" id="searchBtn" on onclick="buildSearchResults()">
+                            <input type="button" value="Search" class="btn" id="searchBtn" onclick="buildSearchResults()">
                         </p>
                     </div>
                         <div id="priceDiv" class="searchRideLocations">
                             <p class="label">
                                 <span class="text searchText">Max Price :</span>
-                                <input type="number" name="searchInput" class="inputText" placeholder="40" />
+                                <input type="number" name="searchInput" class="inputText" value="20" min="0" max="200" />
                             </p>
                         </div>
                         <div id="radioDiv" class="searchRideLocations">
@@ -333,7 +333,7 @@
                             </div>
                             <div class=outPutText>
                                 <div id="stopOverLabelFirst" class="stopOverLabel">
-                                    <p id=firsOut class="stopOverOut"></p>
+                                    <p id=firsOut class="stopOverOut outputStopOver"></p>
                                     <p id=firsOutDetails class="stopOverOutDetails">
                                         <span class="stopTimeSpan">Time :</span>
                                         <input type="text" class="stopTimeInput" value="30"/>
@@ -343,7 +343,7 @@
                                 </div>
                                 <input type="button" id="firstButton" class="clearBtn btn a" value="X"  onclick="removeElement(0)"/>
                                 <div id="stopOverLabelSecond" class="stopOverLabel">
-                                    <p id=secondOut class="stopOverOut"></p>
+                                    <p id=secondOut class="stopOverOut outputStopOver"></p>
                                     <p id=secondOutDetails class="stopOverOutDetails">
                                         <span class="stopTimeSpan">Time :</span>
                                         <input type="text" class="stopTimeInput" value="30"/>
@@ -353,7 +353,7 @@
                                 </div>
                                 <input type="button" id="secondButton" class="clearBtn btn a" value="X" onclick="removeElement(1)"/>
                                 <div id="stopOverLabelThird" class="stopOverLabel">
-                                    <p id=thirdOut class="stopOverOut"></p>
+                                    <p id=thirdOut class="stopOverOut outputStopOver"></p>
                                     <p id=thirdOutDetails class="stopOverOutDetails">
                                         <span class="stopTimeSpan">Time :</span>
                                         <input type="text" class="stopTimeInput" value="30"/>
@@ -363,7 +363,7 @@
                                 </div>
                                 <input type="button" id="thirdButton" class="clearBtn btn a" value="X" onclick="removeElement(2)"/>
                                 <div id="stopOverLabelFourth" class="stopOverLabel">
-                                    <p id=fourthOut class="stopOverOut"></p>
+                                    <p id=fourthOut class="stopOverOut outputStopOver"></p>
                                     <p id="fourthOutDetails" class="stopOverOutDetails">
                                         <span class="stopTimeSpan">Time :</span>
                                         <input type="text" class="stopTimeInput" value="30"/>
@@ -373,7 +373,7 @@
                                 </div>
                                 <input type="button" id="fourthButton" class="clearBtn btn a" value="X" onclick="removeElement(3)"/>
                                 <div id="stopOverLabelFifth" class="stopOverLabel">
-                                    <p id=fifthOut class="stopOverOut"></p>
+                                    <p id=fifthOut class="stopOverOut outputStopOver"></p>
                                     <p id="fifthOutDetails" class="stopOverOutDetails">
                                         <span class="stopTimeSpan">Time :</span>
                                         <input type="text" class="stopTimeInput" value="30"/>
@@ -386,7 +386,7 @@
                     </div>
 
                     <p class="label" >
-                        <input type="button" class="publishPostButton btn" value="Publish"/>
+                        <input type="button" class="publishPostButton btn" value="Publish" id="publishRideBtn" onClick="publishRide()"/>
                         <input type="button" class="clearAllDataButton btn" value="Clear" onclick="clearAllPublishFields()"/>
                     </p>
 
