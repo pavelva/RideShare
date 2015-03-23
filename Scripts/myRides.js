@@ -217,7 +217,7 @@ function createStopList(ride){
 
 function addRide(rideObj){
     alert('add ride');
-    alert(rideObj.type);
+    alert(rideObj.rideDetails.id);
     createRide(rideObj, function(rideHtml){
         alert('start append');
         $(rideHtml).insertAfter("#myRides .pageHeader");
