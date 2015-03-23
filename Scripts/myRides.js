@@ -33,7 +33,9 @@ function initMyRidesPage(){
 function updateMyRides(ride) {
     if (ride.type == 'Ride') {
         createRide(ride, function(rideHtml){
+            alert('start append');
             $("#myRides").append(rideHtml);
+            alert('finish append');
         });
     }
     else {
