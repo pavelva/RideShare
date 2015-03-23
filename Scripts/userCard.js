@@ -70,8 +70,9 @@ function loadNotifications(user){
 
 function deleteNotification(userID, notID){
     server.deleteNotification(userID, notID,function(){
-        $("#notification" + notID).hide();
-        notificationsScrollerApi.reinitialise();
+        $.when($("#notification" + notID).hide()).then(function(){
+            notificationsScrollerApi.reinitialise();
+        });
     }, function(){
         alert('error deleting notification');
     })
