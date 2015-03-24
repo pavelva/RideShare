@@ -1,5 +1,6 @@
-﻿var serverUrl = 'http://' + location.host + (location.hostname == 'localhost'? '/RideShare/':'');
+﻿//var serverUrl = 'http://' + location.host + (location.hostname == 'localhost'? '/RideShare/':'');
 //"http://localhost:63342/RideShare/";
+var serverUrl = 'http://rideshare.apphb.com/';
 
 var pages = {
     myRides: {
