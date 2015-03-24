@@ -48,7 +48,7 @@ function getParameterByName(name) {
 }
 $(document).ready(function(){
     var userID = getParameterByName('id');
-    alert(serverUrl);
+    //alert(serverUrl);
     $('nav .links').hide();
     //$('#userCard').hide();
     //$('#notifications *').hide();
