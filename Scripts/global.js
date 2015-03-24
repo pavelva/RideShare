@@ -1,4 +1,5 @@
-﻿var serverUrl = "http://localhost:63342/RideShare/";
+﻿var serverUrl = 'http://' + location.host + (location.hostname == 'localhost'? '/RideShare/':'');
+//"http://localhost:63342/RideShare/";
 
 var pages = {
     myRides: {
@@ -46,7 +47,7 @@ function getParameterByName(name) {
 }
 $(document).ready(function(){
     var userID = getParameterByName('id');
-
+    //alert(serverUrl);
     $('nav .links').hide();
     //$('#userCard').hide();
     //$('#notifications *').hide();
