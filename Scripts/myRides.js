@@ -33,7 +33,7 @@ function initMyRidesPage(){
 function updateMyRides(ride) {
     if (ride.type == 'Ride') {
         createRide(ride, function(rideHtml){
-            $("#myRides").append(rideHtml);
+            $("#myRides #rides").append(rideHtml);
         });
     }
     else {
@@ -103,7 +103,7 @@ function createRequest(requestObj){
                 (requestObj.status == 'Done' && !requestObj.ranked ? '<input id="rankRideBtn' + requestObj.id + '" type="button" class="btn control a" value="Rank Ride"/>' : '') +
             '</div>' +
         '</div>';
-    $("#myRides").append(rq);
+    $("#myRides #rides").append(rq);
 
     if(ride.status == 'Done'){
         $('#rankRideBtn' + requestObj.id).click(function(){
@@ -264,7 +264,7 @@ function initMyRidesFilters(){
 }
 
 function filter(btn, btnClass){
-    $('main .jspVerticalBar').slideUp();
+    $('#myRides #rides .jspVerticalBar').slideUp();
     filterAll(btnClass);
     btn.css('color', 'white');
     setTimeout(function(){

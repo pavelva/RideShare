@@ -1,18 +1,16 @@
-﻿//var serverUrl = 'http://' + location.host + (location.hostname == 'localhost'? '/RideShare/':'');
-//"http://localhost:63342/RideShare/";
-var serverUrl = 'http://rideshare.apphb.com/';
+﻿var serverUrl = "http://localhost:63342/RideShare/";
 
 var pages = {
     myRides: {
         navigatorID: 'aMyRides',
         containerID: 'myRides',
         loadFunction: function(){
-            $('main').jScrollPane({
+            $('#myRides #rides').jScrollPane({
                     verticalGutter: 0
                 }
             );
-            myRidesScrollerApi = $('main').data('jsp');
-            notificationsScrollerApi = $("#notifications").data('jsp');
+            myRidesScrollerApi = $('#myRides #rides').data('jsp');
+            notificationsScrollerApi = $("#notifications #notificationsContent").data('jsp');
         }
     },
     publishRide: {
@@ -48,7 +46,7 @@ function getParameterByName(name) {
 }
 $(document).ready(function(){
     var userID = getParameterByName('id');
-    //alert(serverUrl);
+
     $('nav .links').hide();
     //$('#userCard').hide();
     //$('#notifications *').hide();
@@ -75,7 +73,7 @@ $(document).ready(function(){
             });
             $("#rightAside").animate({width:"23%"},600,function(){
                 $('#notifications *').fadeIn(200);
-                $('#notifications').jScrollPane({
+                $('#notifications #notificationsContent').jScrollPane({
                         verticalGutter: 0,
                         horizontalGutter: 0
                     }
@@ -145,10 +143,10 @@ function updateCurrentPage(page) {
         $('#' + curPage.navigatorID).unbind("mouseenter mouseleave");
         $('#' + curPage.containerID).show();
 
-        $('main').jScrollPane({
-                verticalGutter: 0
-            }
-        );
+        //$('main').jScrollPane({
+        //        verticalGutter: 0
+        //    }
+        //);
 
         $("main").slideDown(400, curPage.loadFunction);
     });

@@ -1,5 +1,5 @@
 #updates{
-    width: 100%;
+    /*width: 100%;*/
     height:100%;
     position:relative;
 }
@@ -13,8 +13,10 @@
     display:none;
 }
 
-#updates div{
+#updates > div{
     border-right:none;
+    /*border:none !important;*/
+    /*box-shadow: 1px 1px rgba(255,255,255,0.7), -1px -1px rgba(255,255,255,0.7);*/
 }
 
 .updatesIcon{
@@ -35,10 +37,8 @@
 }
 
 #notifications{
-    display: block;
     width:100%;
     height:49%;
-    position:absolute;
     right:0;
     margin: 0 0 5px 0;
 
@@ -49,6 +49,12 @@
     color:#3eaaf5;
     font-size: 1.2em;
     border-bottom: 1px solid rgba(255,255,255,0.4);
+    height:8%;
+}
+
+#notifications #notificationsContent{
+    height:92%;
+    width:100%;
 }
 
 #notifications .notification{
@@ -114,7 +120,7 @@
 #futureRides{
     width:100%;
     height:49%;
-    position:absolute;
+    /*position:absolute;*/
     right:0;
     top:50%;
 }

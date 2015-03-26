@@ -55,7 +55,7 @@ function loadRanks(rank, type) {
 }
 
 function loadNotifications(user){
-    var notificationContainer = $("#notifications");
+    var notificationContainer = $("#notifications #notificationsContent");
     var notifications = user.notifications;
     for (i in notifications){
         var not = '<div class="notification" id="notification' + i + '">' +

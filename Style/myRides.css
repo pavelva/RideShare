@@ -1,12 +1,13 @@
 #myRides{
-    /*width:99%;*/
+    height:100%;
 }
 
 #myRides .pageHeader{
-    height:65px;
-    border-bottom: none;
+    height:8%;
+    /*border-bottom: none;*/
     font-size: 1.8em;
 }
+
 #myRides #myRidesfilterType{
     position: absolute;
     bottom:6px;
@@ -30,7 +31,12 @@
     color: #ced0cc;
 }
 
-.myRide {
+#rides{
+    width:100%;
+    height:90%;
+}
+
+.myRide{
     margin: 0 0 5px 0;
 }
 
@@ -129,3 +135,25 @@
     padding:0 8px;
     height: 30px;
 }
+
+/*JSCROLLBAR*/
+/*#myRides #rides.jspContainer{*/
+    /*position:relative;*/
+    /*height:100% !important;*/
+    /*width: 100% !important;*/
+/*}*/
+
+/*#myRides #rides.jspPane{*/
+    /*position:absolute;*/
+    /*width: 100%!important;*/
+/*}*/
+
+#myRides #rides .jspVerticalBar
+{
+    width:0 !important;
+}
+#myRides #rides .jspHorizontalBar{
+    display:none;
+}
+
+

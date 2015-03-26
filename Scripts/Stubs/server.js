@@ -1,8 +1,7 @@
-﻿var serverUrl = 'http://rideshare.apphb.com/';
-
+﻿
 $(document).ready(function(){
-    $.getScript(serverUrl + "Scripts/Stubs/users.js").done(function(){
-        $.getScript(serverUrl +"Scripts/Stubs/data.js");
+    $.getScript("Scripts/Stubs/users.js").done(function(){
+        $.getScript("Scripts/Stubs/data.js");
     });
 });
 
