@@ -70,11 +70,12 @@ function loadNotifications(user){
 
 function deleteNotification(userID, notID){
     server.deleteNotification(userID, notID,function(){
-        $.when($("#notification" + notID).hide()).then(function(){
+        $.when($("#notification" + notID).slideUp(100)).then(function(){
+            $("#notification" + notID).remove();
             notificationsScrollerApi.reinitialise();
         });
     }, function(){
         alert('error deleting notification');
-    })
+    });
 
 }

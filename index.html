@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>RideShare</title>
     <link rel="stylesheet" type="text/css" href="Style/main.css">
+    <link rel="stylesheet" type="text/css" href="Style/home.css">
     <link rel="stylesheet" type="text/css" href="Style/myRides.css">
     <link rel="stylesheet" type="text/css" href="Style/userCard.css">
     <link rel="stylesheet" type="text/css" href="Style/searchRide.css">
@@ -38,10 +39,11 @@
     </header>
     <nav>
         <div class="links">
-            <a id="aMyRides" onclick="updateCurrentPage(pages.myRides)">My Rides</a>
+            <a id="aHome" onclick="updateCurrentPage(pages.home)">Home Page</a>
             <a id="aSearchRide" onclick="updateCurrentPage(pages.searchRides)">Search Ride</a>
             <a id="aPublishRide" onclick="updateCurrentPage(pages.publishRide)">Publish Ride</a>
             <a id="aPostRequest" onclick="updateCurrentPage(pages.postRequest)">Post Request</a>
+            <a id="aMyRides" onclick="updateCurrentPage(pages.myRides)">My Rides</a>
         </div>
     </nav>
 
@@ -98,6 +100,20 @@
         </aside>
 
         <main>
+
+            <div id="home" class="mainContent">
+
+                <div id="futureRides1" class="container">ToDo - Some More Information</div>
+                <div id="futureRides" class="container">ToDo - Upcoming Rides</div>
+
+                <div id="notifications" class="container">
+                    <div class="header">
+                        Notifications
+                        <span id="notificationCount" class="updatesIcon">!</span>
+                    </div>
+                    <div id="notificationsContent"></div>
+                </div>
+            </div>
 
             <div id="myRides" class="mainContent">
                 <div class="pageHeader container">
@@ -397,15 +413,20 @@
         </main>
 
         <aside id="rightAside">
-            <div id="updates">
-                <div id="notifications" class="container">
+            <div id="promotions">
+                <div id="bestDrivers" class="container bestUsers">
                     <div class="header">
-                        Notifications
-                        <span id="notificationCount" class="updatesIcon">!</span>
+                        Driver Of The Month
                     </div>
-                    <div id="notificationsContent"></div>
+                    <div id="bestDriversContent" class="bestUsersContent"></div>
                 </div>
-                <div id="futureRides" class="container">ToDo - Future Rides</div>
+
+                <div id="bestRider" class="container  bestUsers">
+                    <div class="header">
+                        Rider Of The Month
+                    </div>
+                    <div id="bestRiderContent" class="bestUsersContent"></div>
+                </div>
             </div>
         </aside>
 

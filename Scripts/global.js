@@ -1,15 +1,15 @@
 ﻿var serverUrl = "http://localhost:63342/RideShare/";
 
 var pages = {
-    myRides: {
-        navigatorID: 'aMyRides',
-        containerID: 'myRides',
+    home: {
+        navigatorID: 'aHome',
+        containerID: 'home',
         loadFunction: function(){
-            $('#myRides #rides').jScrollPane({
+            $('#notifications #notificationsContent').jScrollPane({
                     verticalGutter: 0
                 }
             );
-            myRidesScrollerApi = $('#myRides #rides').data('jsp');
+
             notificationsScrollerApi = $("#notifications #notificationsContent").data('jsp');
         }
     },
@@ -27,6 +27,18 @@ var pages = {
         navigatorID: 'aPostRequest',
         containerID: 'postRequest',
         loadFunction: function(){}
+    },
+    myRides: {
+        navigatorID: 'aMyRides',
+        containerID: 'myRides',
+        loadFunction: function(){
+            $('#myRides #rides').jScrollPane({
+                    verticalGutter: 0
+                }
+            );
+
+            myRidesScrollerApi = $('#myRides #rides').data('jsp');
+        }
     }
 };
 
@@ -50,7 +62,7 @@ $(document).ready(function(){
     $('nav .links').hide();
     //$('#userCard').hide();
     //$('#notifications *').hide();
-    $('.updatesIcon').hide();
+    //$('.updatesIcon').hide();
     closeAll();
     //init();
 
@@ -63,7 +75,7 @@ $(document).ready(function(){
             init(userID);
 
             $('#userCard').hide();
-            $('#notifications *').hide();
+            //$('#notifications *').hide();
 
             $(this).dequeue('load');
         }).queue('load',function(){
@@ -72,12 +84,12 @@ $(document).ready(function(){
                 $('#userCard').fadeIn(200);
             });
             $("#rightAside").animate({width:"23%"},600,function(){
-                $('#notifications *').fadeIn(200);
-                $('#notifications #notificationsContent').jScrollPane({
-                        verticalGutter: 0,
-                        horizontalGutter: 0
-                    }
-                );
+                //$('#notifications *').fadeIn(200);
+                //$('#notifications #notificationsContent').jScrollPane({
+                //        verticalGutter: 0,
+                //        horizontalGutter: 0
+                //    }
+                //);
             });
         }).dequeue('load');
     });
@@ -99,7 +111,7 @@ function init(userID) {
     initMyRidesPage();
     loadNotifications(user);
 
-    updateCurrentPage(pages.myRides);
+    updateCurrentPage(pages.home);
 
 }
 
@@ -118,16 +130,6 @@ function logout() {
 }
 
 
-//function getMyRides(userID) {
-//    for (i in myRides) {
-//        if (myRides[i].id == userID) {
-//            return myRides[i].data;
-//        }
-//    }
-//
-//    alert('No Such MyRides Page For User ID :' + userID);
-//}
-
 function updateCurrentPage(page) {
     if(curPage == page) {
         return;
@@ -142,11 +144,6 @@ function updateCurrentPage(page) {
         $('#' + page.navigatorID).css("color", "#edc038");
         $('#' + curPage.navigatorID).unbind("mouseenter mouseleave");
         $('#' + curPage.containerID).show();
-
-        //$('main').jScrollPane({
-        //        verticalGutter: 0
-        //    }
-        //);
 
         $("main").slideDown(400, curPage.loadFunction);
     });
@@ -180,7 +177,6 @@ function loadPopup(content){
             children.children().fadeIn(50);
         }, 750);
     });
-    //popup.append(content).done(function(){alert(1);}).fadeIn(200);
 }
 
 function closePopup(){

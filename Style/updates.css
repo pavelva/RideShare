@@ -1,126 +1,40 @@
-#updates{
-    /*width: 100%;*/
+#promotions{
+    width: 100%;
     height:100%;
     position:relative;
 }
 
-#updates .jspVerticalBar{
-    width:0 !important;
-
+#promotions .bestUsers{
+    border:none !important;
+    box-shadow: inset 1px 1px rgba(255,255,255,0.7), 1px 1px rgba(255,255,255,0.7);
 }
 
-#updates .jspHorizontalBar{
-    display:none;
-}
-
-#updates > div{
-    border-right:none;
-    /*border:none !important;*/
-    /*box-shadow: 1px 1px rgba(255,255,255,0.7), -1px -1px rgba(255,255,255,0.7);*/
-}
-
-.updatesIcon{
-    display: block;
-    float:right;
-    width:26px;
-    line-height:18px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'algirian';
-    text-shadow: 1px 1px black;
-    text-align: center;
-    box-shadow: inset 1px 1px rgba(255,255,255,0.8), 1px 1px rgba(255,255,255,0.5);
-    border-radius: 10px;
-    background: rgba(237,192,56,1);
-    margin:4px 2px 0 0;
-    color:white;
-}
-
-#notifications{
+.bestUsers{
     width:100%;
     height:49%;
     right:0;
-    margin: 0 0 5px 0;
-
+}
+#bestDrivers{
+    margin: 0 0 1% 0;
 }
 
-#notifications .header {
+.bestUsers .header {
     width:100%;
     color:#3eaaf5;
-    font-size: 1.2em;
+    font-size: 1em;
     border-bottom: 1px solid rgba(255,255,255,0.4);
-    height:8%;
+    height:6%;
 }
 
-#notifications #notificationsContent{
+.bestUsers .bestUsersContent{
     height:92%;
     width:100%;
 }
 
-#notifications .notification{
-    display: inline-block;
-    vertical-align: top;
-    width:100%;
-    padding:20px 0 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
-    position:relative;
-}
-
-#notifications .notification:nth-of-type(even){
-    background-color: rgba(255,255,255,0.1);
-}
-#notifications .notification:hover > .deleteNotification{
-    display:block !important;
-}
-
-#notifications .notification:hover{
-    background: rgba(255,255,255,0.2);
-    cursor: default;
-}
-
-#notifications .notification .deleteNotification{
-    background: rgba(250,0,0,0.8);
-    /*box-shadow: inset 1px 1px rgba(255,255,255,0.3), 1px 1px rgba(255,255,255,0.2);*/
-    box-shadow: inset 1px 1px rgba(255,255,255,0.3), 1px 1px rgba(255,255,255,0.1);
-    color:black;
-    position:absolute;
-    font-weight: bold;
-    right:3px;
-    top:3px;
-    width:25px;
-    height:15px;
-    display:none !important;
-}
-
-#notifications .notification .deleteNotification:hover{
-    /*background: rgba(150,0,0,1);*/
-    background: rgba(190,0,0,1);
-    cursor: pointer;
-}
-#notifications .notification .deleteNotification:active{
-    box-shadow:  inset -1px -1px rgba(255,255,255,0.2);
-}
-.notification .title{
-    display: block;
-    width:100%;
-    margin: 0 0 1% 1%;
-    font-size: 0.9em;
-    color:white;
-}
-
-.notification .body{
-    display: block;
-    width:98%;
-    padding: 0 0 0 2%;
-    margin:0 0 10px 0;
-    font-size: 0.8em;
-    color: #ced0cc;
-}
-
-#futureRides{
-    width:100%;
-    height:49%;
+/*#futureRides{*/
+    /*width:100%;*/
+    /*height:49%;*/
     /*position:absolute;*/
-    right:0;
-    top:50%;
-}
+    /*right:0;*/
+    /*top:50%;*/
+/*}*/
